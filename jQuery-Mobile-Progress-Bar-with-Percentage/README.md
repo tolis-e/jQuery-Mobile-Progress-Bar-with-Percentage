@@ -4,16 +4,12 @@ jQuery-Mobile-Progress-Bar-with-Percentage v1.0.0 (called Tolito Progress Bar)
 jQuery-Mobile-Progress-Bar-with-Percentage v1.0.0 Overview
 --------
 
-The Tolito Progress Bar is a custom plugin for jQuery Mobile which offers 
-the functionality to create and manage a progress bar. In addition it 
-provides the options to set the progress bar's outer theme and inner 
-filling theme on the basis of the jQuery Mobile standard themes, to 
-show a percentage completion counter, to set whether the progress bar 
-has normal or mini size, to define the interval which specifies the 
-filling frequency rate, to configure the max value of the outer bar and 
-set the initial value of the filling inner bar. The idea of JavaScript 
-prototype chaining has been used in order to enable the chaining of
-separate method calls where each call is made on the same instance. 
+The Tolito Progress Bar is a custom plugin for jQuery Mobile which offers the functionality to create and manage a 
+progress bar. In addition it provides the options to set the progress bar's outer theme and inner filling theme on the 
+basis of the jQuery Mobile standard themes, to show a percentage completion counter, to set whether the progress bar 
+has normal or mini size, to define the interval which specifies the filling frequency rate, to configure the max value 
+of the outer bar and set the initial value of the filling inner bar. The idea of JavaScript prototype chaining has been 
+used in order to enable the chaining of separate method calls where each call is made on the same instance. 
 
 Compatibility
 --------
@@ -23,14 +19,13 @@ Compatibility
 Examples
 -------
 	
-	The are 5 example files in the examples folder. The example_1.html file contains an example
-	of a mini tolito progress bar. The example_2.html includes an example of a jQuery Mobile
-	dialog which contains a tolito progress bar. The example_3.html includes an example of an
-	overlay which contains a tolito progress bar. The example_4.html includes an example of
-	a jQuery Mobile dialog which contains a tolito progress bar that inits loading after delay.
-	The example_5.html contains an example of a basic unconfigured mini tolito progress bar.
-    Open the example files using a browser. Note that the HTML files use CDN-hosted versions 
-	of jQuery Mobile and jQuery.
+	The are 5 example files in the examples folder. The example_1.html file contains an example of a mini tolito 
+	progress bar. The example_2.html includes an example of a jQuery Mobile dialog which contains a tolito progress 
+	bar. The example_3.html includes an example of an overlay which contains a tolito progress bar. 
+	The example_4.html includes an example of a jQuery Mobile dialog which contains a tolito progress bar that 
+	inits loading after delay. The example_5.html contains an example of a basic unconfigured mini tolito progress 
+	bar.Open the example files using a browser. Note that the HTML files use CDN-hosted versions of jQuery Mobile 
+	and jQuery.
 
 Quick Start Guide
 ---------------
