@@ -4,7 +4,7 @@ jQuery-Mobile-Progress-Bar-with-Percentage v1.0.0 (called Tolito Progress Bar)
 jQuery-Mobile-Progress-Bar-with-Percentage v1.0.0 Overview
 --------
 
-The Tolito Progress Bar is a jQuery Mobile plugin which, offers the 
+The Tolito Progress Bar is a jQuery Mobile plugin which offers the 
 functionality to create and manage a progress bar. In addition it 
 provides the options to set the progress bar's outer theme and inner 
 filling theme on the basis of the jQuery Mobile standard themes, to 
