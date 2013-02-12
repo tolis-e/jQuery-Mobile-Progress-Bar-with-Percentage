@@ -1,4 +1,4 @@
-jQuery-Mobile-Progress-Bar-with-Percentage v1.0.0 (called Tolito Progress Bar)
+jQuery-Mobile-Progress-Bar-with-Percentage v1.0.0 (Tolito Progress Bar)
 =========================================================
 
 jQuery-Mobile-Progress-Bar-with-Percentage v1.0.0 Overview
@@ -14,18 +14,17 @@ to enable the chaining of separate method calls where each call is made on the s
 Compatibility
 --------
 
-    Tested along jQuery 1.8.2 and jQuery Mobile 1.2.0
+   Tested along with jQuery 1.8.2 and jQuery Mobile 1.2.0
 
 Examples
 -------
 	
-	The are 5 example files in the examples folder. The example_1.html file contains an example of a mini tolito 
-	progress bar. The example_2.html includes an example of a jQuery Mobile dialog which contains a tolito progress 
-	bar. The example_3.html includes an example of an overlay which contains a tolito progress bar. 
-	The example_4.html includes an example of a jQuery Mobile dialog which contains a tolito progress bar that 
-	inits loading after delay. The example_5.html contains an example of a basic unconfigured mini tolito progress 
-	bar.Open the example files using a browser. Note that the HTML files use CDN-hosted versions of jQuery Mobile 
-	and jQuery.
+	The examples folder contains 5 HTML files. The first example file depicts a mini tolito progress bar with a
+	percentage counter. The second file contains a jQuery Mobile dialog with an embedded tolito progress bar. The 
+	third file shows an overlay which contains a centered message box with an enclosed tolito progress bar. The 
+	fourth file contains a jQuery Mobile dialog with a tolito progress bar which starts loading after a specified 
+	delay period. The last example depicts the usage of a basic unconfigured mini tolito progress bar. Note that
+	the example HTML files are using the CDN-hosted versions of jQuery Mobile and jQuery.
 
 Quick Start Guide
 ---------------
@@ -33,8 +32,8 @@ Quick Start Guide
 	Step 1
 	-------
 
-	Include the following CSS and JS files inside the head section of your HTML file. Note that
-	you can use local copies of the jQuery and jQuery Mobile CSS and JS files instead of the
+	Include the following CSS and JS files inside the head section of your HTML file. Please note 
+	that you can use local copies of the jQuery and jQuery Mobile CSS and JS files instead of the
 	CDN hosted ones.
 	
 	<!-- /jQuery Mobile 1.2.0 CSS file -->
@@ -57,9 +56,9 @@ Quick Start Guide
 	
 	Step 3
 	-------
-	Use the following snippet to configure and build the progress bar. Note that
-	it is not mandatory to set the options. The TolitoProgressBar constructor 
-	expects to receive as an argument the element id of the div tag created in Step 2.
+	Use the following snippet to configure and build the progress bar. It is not mandatory 
+	to set the options. The TolitoProgressBar constructor expects to receive as an argument 
+	the element id of the div tag created in Step 2.
 	
 	TolitoProgressBar('progressbar')
 		.setOuterTheme('b')
