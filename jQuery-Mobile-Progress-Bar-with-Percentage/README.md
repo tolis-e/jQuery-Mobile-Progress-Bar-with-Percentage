@@ -58,7 +58,7 @@ Quick Start Guide
 	
 	Step 3
 	-------
-	Use the following snippet to configure and build the progress bar. It is not mandatory 
+	Use the following snippet to configure, build and init the progress bar. It is not mandatory 
 	to set the options. The TolitoProgressBar constructor expects to receive as an argument 
 	the element id of the div tag created in Step 2.
 	
