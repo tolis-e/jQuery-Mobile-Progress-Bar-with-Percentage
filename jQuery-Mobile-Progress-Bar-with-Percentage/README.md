@@ -132,10 +132,10 @@ Quick Start Guide
 			Usage: Optional
 			Description: Stops the loading/filling procedure.
 
-Copyright And License
+License
 ---------------------
 
-Copyright (c) 2013 Tolis. Check the LICENSE file for more details.
+Check the LICENSE file for more details.
 
 GitHub repository
 -------------------
