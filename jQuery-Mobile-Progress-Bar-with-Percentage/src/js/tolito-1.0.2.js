@@ -237,14 +237,10 @@ TolitoConstructor.prototype = {
         return this;
     },
     setValue: function (val) {
-        if (this._isRunning) {
-            throw '[Error]: The progress bar value cannot be set while the progress bar is running.';
-        } else {
-            $(['#', this.getId()].join(""))
-                .progressbar({
-		    value: val
-		});
-            return this;
-        }
+        $(['#', this.getId()].join(""))
+            .progressbar({
+	        value: val
+	    });
+        return this;
     }
 };
