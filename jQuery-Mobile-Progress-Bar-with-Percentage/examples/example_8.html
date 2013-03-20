@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     
     <head>
@@ -10,19 +10,28 @@
         <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
         <script type="text/javascript" src="../src/js/tolito-1.0.2.js"></script>
         <script>
-            $("#generic-dialog")
+            $("#home-page")
                 .live('pagebeforeshow', function () {
-                TolitoProgressBar('progressbar')
+
+                var tolito = TolitoProgressBar('progressbar')
                     .setOuterTheme('b')
                     .setInnerTheme('e')
-                    .isMini(false)
-                    .setMax(100)
+                    .isMini(true)
+                    .setMax(1000)
                     .setStartFrom(0)
-                    .setInterval(5)
-                    .showCounter(false)
+                    .setInterval(100)
+                    .showCounter(true)
                     .logOptions()
-                    .build()
-                    .run();
+                    .build();
+
+                // set value 300 after 2 seconds and then set value 800 after 3 seconds
+                setTimeout(function () {
+                    tolito.setValue(300);
+                    setTimeout(function () {
+                        tolito.setValue(800);
+                    }, 3000);
+                }, 2000);
+
             });
         </script>
     </head>
@@ -37,21 +46,6 @@
             </div>
             <!-- /content -->
             <div data-role="content">
-                <a href="#generic-dialog" data-role="button" data-inline="true" data-rel="dialog">Open dialog with progress bar</a>
-            </div>
-        </div>
-        <!-- /page -->
-        <div data-role="page" id="generic-dialog">
-            <!-- /header -->
-            <div data-role="header" data-theme="d">
-                 <h1>Progress</h1>
-
-            </div>
-            <!-- /content -->
-            <div data-role="content" data-theme="c">
-                 <h1>Loading data..</h1>
-
-                <p>This is a regular page, styled as a dialog. To create a dialog, just link to a normal page and include a transition and <code>data-rel="dialog"</code> attribute.</p>
                 <div id="progressbar"></div>
             </div>
         </div>

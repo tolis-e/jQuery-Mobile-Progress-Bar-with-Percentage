@@ -204,19 +204,7 @@ TolitoConstructor.prototype = {
         }
 
     },
-    
-     // Set bar value explicitly. Do not use with init.
-    setValue: function (barValue) {
-        (function (inst) {
-            $(['#', inst.getId()].join(""))
-                .progressbar({
-                    value: barValue
-                });
-        })(this);
-        return this;
-    },
-    
-    init: function () {
+    run: function () {
         if (this._isRunning) {
             throw '[Error]: The tolito progress bar is already running.';
         } else {
@@ -247,5 +235,16 @@ TolitoConstructor.prototype = {
             this._isRunning = false;
         }
         return this;
+    },
+    setValue: function (val) {
+        if (this._isRunning) {
+            throw '[Error]: The progress bar value cannot be set while the progress bar is running.';
+        } else {
+            $(['#', this.getId()].join(""))
+                .progressbar({
+		    value: val
+		});
+            return this;
+        }
     }
 };
