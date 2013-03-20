@@ -204,6 +204,18 @@ TolitoConstructor.prototype = {
         }
 
     },
+    
+     // Set bar value explicitly. Do not use with init.
+    setValue: function (barValue) {
+        (function (inst) {
+            $(['#', inst.getId()].join(""))
+                .progressbar({
+                    value: barValue
+                });
+        })(this);
+        return this;
+    },
+    
     init: function () {
         if (this._isRunning) {
             throw '[Error]: The tolito progress bar is already running.';
