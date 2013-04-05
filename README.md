@@ -28,8 +28,6 @@ each call is made on the same instance.
    * example_7.html: tolito progress bar which stops after 5 seconds and resumes after 3 seconds
    * example_8.html: shows how to set explicitly the tolito progress bar's status
    * example_9.html: shows how to listen the event which notifies that the progress bar is completed
-    
-   Note that the example HTML files are using the CDN-hosted versions of jQuery Mobile and jQuery.
 
 ## Quick Start Guide
 	
