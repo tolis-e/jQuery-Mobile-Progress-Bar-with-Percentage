@@ -10,7 +10,7 @@ each call is made on the same instance.
 
 ## Compatibility
 
-   Tested on:
+   Tested along with:
    
    * jQuery 1.8.2 and jQuery Mobile 1.2.0
    * jQuery 1.8.2 and jQuery Mobile 1.3.0
