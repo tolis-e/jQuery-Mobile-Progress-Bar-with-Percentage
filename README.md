@@ -17,19 +17,19 @@ each call is made on the same instance.
 
 ## Examples Folder
 	
-	The examples folder contains 9 sample HTML files.
+   The examples folder contains 9 sample HTML files.
     
-    * example_1.html: mini tolito progress bar with percentage counter
-    * example_2.html: jQuery Mobile dialog with embedded tolito progress bar
-    * example_3.html: overlay with centered tolito progress bar
-    * example_4.html: jQuery Mobile dialog with a tolito progress bar which starts after a delay period
-    * example_5.html: basic default mini tolito progress bar
-    * example_6.html: tolito progress bar which stops after 5 seconds
-    * example_7.html: tolito progress bar which stops after 5 seconds and resumes after 3 seconds
-    * example_8.html: shows how to set explicitly the tolito progress bar's status
-    * example_9.html: shows how to listen the event which notifies that the progress bar is completed
+   * example_1.html: mini tolito progress bar with percentage counter
+   * example_2.html: jQuery Mobile dialog with embedded tolito progress bar
+   * example_3.html: overlay with centered tolito progress bar
+   * example_4.html: jQuery Mobile dialog with a tolito progress bar which starts after a delay period
+   * example_5.html: basic default mini tolito progress bar
+   * example_6.html: tolito progress bar which stops after 5 seconds
+   * example_7.html: tolito progress bar which stops after 5 seconds and resumes after 3 seconds
+   * example_8.html: shows how to set explicitly the tolito progress bar's status
+   * example_9.html: shows how to listen the event which notifies that the progress bar is completed
     
-    Note that the example HTML files are using the CDN-hosted versions of jQuery Mobile and jQuery.
+   Note that the example HTML files are using the CDN-hosted versions of jQuery Mobile and jQuery.
 
 ## Quick Start Guide
 	
