@@ -1,55 +1,55 @@
-jQuery-Mobile-Progress-Bar-with-Percentage v1.0.2 (Tolito Progress Bar)
-=========================================================
+# jQuery-Mobile-Progress-Bar-with-Percentage v1.0.3 (Tolito Progress Bar)
 
-jQuery-Mobile-Progress-Bar-with-Percentage v1.0.2 Overview
---------
-
-The Tolito Progress Bar is a plugin for jQuery Mobile which offers the functionality to create, manage, start, stop, 
-resume and explicitly set the value of a progress bar. In addition it provides the options to set the progress bar's 
-outer theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion 
+The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, starts, stops, resumes and explicitly 
+sets the value of a progress bar. In addition the constructor provides the options to set the progress bar's outer 
+theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion 
 counter, to set whether the progress bar has normal or mini size, to define the interval which specifies the filling 
 frequency rate, to configure the max value of the outer bar and set the initial value of the filling inner bar. The 
-idea of JavaScript prototype chaining has been used in order to enable the chaining of separate method calls where 
+JavaScript prototype chaining method has been used in order to enable the chaining of separate method calls where 
 each call is made on the same instance. 
 
-Compatibility
---------
+## Compatibility
 
-   Tested along with jQuery 1.8.2 and jQuery Mobile 1.2.0
+   Tested on:
+   
+   * jQuery 1.8.2 and jQuery Mobile 1.2.0
+   * jQuery 1.8.2 and jQuery Mobile 1.3.0
 
-Examples
--------
+## Examples Folder
 	
-	The examples folder contains 8 HTML files. The first example file depicts a mini tolito progress bar with a
-	percentage counter. The second file contains a jQuery Mobile dialog with an embedded tolito progress bar. The 
-	third file shows an overlay which contains a centered message box with an enclosed tolito progress bar. The 
-	fourth file contains a jQuery Mobile dialog with a tolito progress bar which starts loading after a specified 
-	delay period. The fifth example depicts the usage of a basic unconfigured mini tolito progress bar. The sixth
-	example shows a tolito progress bar which stops after 5 seconds. The seventh example depicts a tolito progress
-	bar which stops after 5 seconds and resumes after 3 seconds. Note that the example HTML files are using the 
-	CDN-hosted versions of jQuery Mobile and jQuery. The last example shows how to explictly set the progress bar's
-	value.
+	The examples folder contains 9 sample HTML files.
+    
+    * example_1.html: mini tolito progress bar with percentage counter
+    * example_2.html: jQuery Mobile dialog with embedded tolito progress bar
+    * example_3.html: overlay with centered tolito progress bar
+    * example_4.html: jQuery Mobile dialog with a tolito progress bar which starts after a delay period
+    * example_5.html: basic default mini tolito progress bar
+    * example_6.html: tolito progress bar which stops after 5 seconds
+    * example_7.html: tolito progress bar which stops after 5 seconds and resumes after 3 seconds
+    * example_8.html: shows how to set explicitly the tolito progress bar's status
+    * example_9.html: shows how to listen the event which notifies that the progress bar is completed
+    
+    Note that the example HTML files are using the CDN-hosted versions of jQuery Mobile and jQuery.
 
-Quick Start Guide
----------------
+## Quick Start Guide
 	
 	Step 1
 	-------
 
 	Include the following CSS and JS files inside the head section of your HTML file. Please note 
 	that you can use local copies of the jQuery and jQuery Mobile CSS and JS files instead of the
-	CDN hosted ones.
+	CDN hosted ones. The X.X.X represents the digits which defines a specific version (ex: 1.8.2).
 	
-	<!-- /jQuery Mobile 1.2.0 CSS file -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-	<!-- /Tolito 1.0 CSS file -->
-	<link rel="stylesheet" type="text/css" href="./css/tolito-1.0.2.css" />
-	<!-- /jQuery 1.8.2 JS CDN hosted file -->
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<!-- /jQuery Mobile 1.2.0 JS CDN hosted file -->
-	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<!-- /jQuery Mobile X.X.X CSS file -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.css" />
+	<!-- /Tolito 1.0.3 CSS file -->
+	<link rel="stylesheet" type="text/css" href="./css/tolito-1.0.3.min.css" />
+	<!-- /jQuery X.X.X JS CDN hosted file -->
+	<script src="http://code.jquery.com/jquery-X.X.X.min.js"></script>
+	<!-- /jQuery Mobile X.X.X JS CDN hosted file -->
+	<script src="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.js"></script>
 	<!-- /Tolito JS file -->
-	<script type="text/javascript" src="./js/tolito-1.0.2.js"></script>
+	<script type="text/javascript" src="./js/tolito-1.0.3.min.js"></script>
 
 	Step 2
 	-------
@@ -75,6 +75,16 @@ Quick Start Guide
 		.logOptions()
 		.build()
 		.run();
+
+    Listen the complete event:
+
+        As soon as the progress bar is completed, a complete event is triggered. The below piece of 
+        code attaches an event handler:
+
+            $(document)
+                .on('complete', '#progressbar', function () {
+                    // your code
+            });
 	
 	Configuration Setters, Build and Init procedure:
 	
@@ -138,12 +148,10 @@ Quick Start Guide
 			Usage: Optional
 			Description: Explicitly sets the value of the progress bar.
 
-License
----------------------
+## License
 
 Check the LICENSE file for more details.
 
-GitHub repository
--------------------
+## GitHub repository
 
 https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage

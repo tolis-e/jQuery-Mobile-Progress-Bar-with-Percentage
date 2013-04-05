@@ -56,6 +56,9 @@ $.widget("mobile.progressbar", {
         this.options.value = value;
         if (key === "value") {
             this._refreshValue();
+            if (this._value() === this.options.max) {
+                this.element.trigger("complete");
+            }
         }
     },
     _value: function () {
