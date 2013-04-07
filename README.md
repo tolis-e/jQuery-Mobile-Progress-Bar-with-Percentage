@@ -36,7 +36,7 @@ each call is made on the same instance.
 
 	Include the following CSS and JS files inside the head section of your HTML file. Please note 
 	that you can use local copies of the jQuery and jQuery Mobile CSS and JS files instead of the
-	CDN hosted ones. The X.X.X represents the digits which defines a specific version (ex: 1.8.2).
+	CDN hosted ones. The X.X.X represents the digits which define a specific version (ex: 1.8.2).
 	
 	<!-- /jQuery Mobile X.X.X CSS file -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.css" />
