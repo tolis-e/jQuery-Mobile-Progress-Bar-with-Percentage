@@ -16,7 +16,7 @@ each call is made on the same instance.
    * jQuery 1.8.2 and jQuery Mobile 1.3.0
 
 ## Examples Folder
-	
+
    The examples folder contains 9 sample HTML files.
     
    * example_1.html: mini tolito progress bar with percentage counter
@@ -30,49 +30,49 @@ each call is made on the same instance.
    * example_9.html: shows how to listen the event which notifies that the progress bar is completed
 
 ## Quick Start Guide
-	
-	Step 1
-	-------
 
-	Include the following CSS and JS files inside the head section of your HTML file. Please note 
-	that you can use local copies of the jQuery and jQuery Mobile CSS and JS files instead of the
-	CDN hosted ones. The X.X.X represents the digits which define a specific version (ex: 1.8.2).
-	
-	<!-- /jQuery Mobile X.X.X CSS file -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.css" />
-	<!-- /Tolito 1.0.3 CSS file -->
-	<link rel="stylesheet" type="text/css" href="./css/tolito-1.0.3.min.css" />
-	<!-- /jQuery X.X.X JS CDN hosted file -->
-	<script src="http://code.jquery.com/jquery-X.X.X.min.js"></script>
-	<!-- /jQuery Mobile X.X.X JS CDN hosted file -->
-	<script src="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.js"></script>
-	<!-- /Tolito JS file -->
-	<script type="text/javascript" src="./js/tolito-1.0.3.min.js"></script>
+    Step 1
+    -------
 
-	Step 2
-	-------
-	Add the following HTML snippet inside your jQM page:
-	
-	<!-- /Tolito Progress Bar v1.0 for jQuery Mobile -->
-	<div id="progressbar"></div>
-	
-	Step 3
-	-------
-	Use the following snippet to configure, build and init the progress bar. It is not mandatory 
-	to set the options. The TolitoProgressBar constructor expects to receive as an argument 
-	the element id of the div tag created in Step 2.
-	
-	TolitoProgressBar('progressbar')
-		.setOuterTheme('b')
-		.setInnerTheme('e')
-		.isMini(false)
-		.setMax(100)
-		.setStartFrom(0)
-		.setInterval(10)
-		.showCounter(true)
-		.logOptions()
-		.build()
-		.run();
+    Include the following CSS and JS files inside the head section of your HTML file. Please note 
+    that you can use local copies of the jQuery and jQuery Mobile CSS and JS files instead of the
+    CDN hosted ones. The X.X.X represents the digits which define a specific version (ex: 1.8.2).
+
+    <!-- /jQuery Mobile X.X.X CSS file -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.css" />
+    <!-- /Tolito 1.0.3 CSS file -->
+    <link rel="stylesheet" type="text/css" href="./css/tolito-1.0.3.min.css" />
+    <!-- /jQuery X.X.X JS CDN hosted file -->
+    <script src="http://code.jquery.com/jquery-X.X.X.min.js"></script>
+    <!-- /jQuery Mobile X.X.X JS CDN hosted file -->
+    <script src="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.js"></script>
+    <!-- /Tolito JS file -->
+    <script type="text/javascript" src="./js/tolito-1.0.3.min.js"></script>
+
+    Step 2
+    -------
+    Add the following HTML snippet inside your jQM page:
+
+    <!-- /Tolito Progress Bar v1.0 for jQuery Mobile -->
+    <div id="progressbar"></div>
+    
+    Step 3
+    -------
+    Use the following snippet to configure, build and init the progress bar. It is not mandatory 
+    to set the options. The TolitoProgressBar constructor expects to receive as an argument 
+    the element id of the div tag created in Step 2.
+   
+    TolitoProgressBar('progressbar')
+        .setOuterTheme('b')
+        .setInnerTheme('e')
+        .isMini(false)
+        .setMax(100)
+        .setStartFrom(0)
+        .setInterval(10)
+        .showCounter(true)
+        .logOptions()
+        .build()
+        .run();
 
     Listen the complete event:
 
@@ -83,72 +83,72 @@ each call is made on the same instance.
                 .on('complete', '#progressbar', function () {
                     // your code
             });
-	
-	Configuration Setters, Build and Init procedure:
-	
-		setOuterTheme(theme)
-			Usage: Optional
-			Description: Sets the outer theme of the progress bar. The theme argument
-			must be 'a' or 'b' or 'c' or 'd' or 'e'. The default theme is based
-			on the inherit chain or the default value 'c'.
-			
-		setInnerTheme(theme)
-			Usage: Optional
-			Description: Sets the filling theme of the progress bar. The theme argument
-			must be 'a' or 'b' or 'c' or 'd' or 'e'. The default theme is based
-			on the inherit chain or the default value 'c'.
-		
-		isMini(bool)
-			Usage: Optional
-			Description: Sets whether the progress bar has mini size. The bool argument
-			must be true or false. The default value is false.
-			
-		setMax(max)
-			Usage: Optional
-			Description: Sets the max value of the progress bar. The progress bar is
-			considered as completed when the counter reaches the specified
-			max value. The default value is 100.
-			
-		setStartFrom(startFrom)
-			Usage: Optional
-			Decsription: Sets the initial value of the filling bar. For example if a progress
-			bar has max value 100 and the startFrom value is 50 then the bar
-			will start loading from value 50 (the middle of the bar). The default
-			value is 0.
-		
-		setInterval(interval)
-			Usage: Optional
-			Description: Sets the progress bar's loading frequency rate in milliseconds. The 
-			default value is 100.
-			
-		showCounter(bool)
-			Usage: Optional
-			Description: Sets whether a percentage completion counter is appeared or not. The
-			bool argument must be true or false. The default value is true.
-		
-		logOptions()
-			Usage: Optional
-			Description: Logs the configured options in the console.
-			
-		build()
-			Usage: Mandatory
-			Description: Creates the progress bar instance.
-			
-		run()
-			Usage: Optional
-			Description: Inits or resumes the loading/filling procedure.
-			
-		stop()
-			Usage: Optional
-			Description: Stops the loading/filling procedure.
 
-		setValue(val)
-			Usage: Optional
-			Description: Explicitly sets the value of the progress bar.
+    Configuration Setters, Build and Init procedure:
+    
+        setOuterTheme(theme)
+            Usage: Optional
+            Description: Sets the outer theme of the progress bar. The theme argument
+            must be 'a' or 'b' or 'c' or 'd' or 'e'. The default theme is based
+            on the inherit chain or the default value 'c'.
+
+        setInnerTheme(theme)
+            Usage: Optional
+            Description: Sets the filling theme of the progress bar. The theme argument
+            must be 'a' or 'b' or 'c' or 'd' or 'e'. The default theme is based
+            on the inherit chain or the default value 'c'.
+
+        isMini(bool)
+            Usage: Optional
+            Description: Sets whether the progress bar has mini size. The bool argument
+            must be true or false. The default value is false.
+
+        setMax(max)
+            Usage: Optional
+            Description: Sets the max value of the progress bar. The progress bar is
+            considered as completed when the counter reaches the specified
+            max value. The default value is 100.
+
+        setStartFrom(startFrom)
+            Usage: Optional
+            Decsription: Sets the initial value of the filling bar. For example if a progress
+            bar has max value 100 and the startFrom value is 50 then the bar
+            will start loading from value 50 (the middle of the bar). The default
+            value is 0.
+
+        setInterval(interval)
+            Usage: Optional
+            Description: Sets the progress bar's loading frequency rate in milliseconds. The 
+            default value is 100.
+
+        showCounter(bool)
+            Usage: Optional
+            Description: Sets whether a percentage completion counter is appeared or not. The
+            bool argument must be true or false. The default value is true.
+
+        logOptions()
+            Usage: Optional
+            Description: Logs the configured options in the console.
+
+        build()
+            Usage: Mandatory
+            Description: Creates the progress bar instance.
+
+        run()
+            Usage: Optional
+            Description: Inits or resumes the loading/filling procedure.
+
+        stop()
+            Usage: Optional
+            Description: Stops the loading/filling procedure.
+
+        setValue(val)
+            Usage: Optional
+            Description: Explicitly sets the value of the progress bar.
 
 ## License
 
-Check the LICENSE file for more details.
+Check the LICENSE.txt file for more details.
 
 ## GitHub repository
 
