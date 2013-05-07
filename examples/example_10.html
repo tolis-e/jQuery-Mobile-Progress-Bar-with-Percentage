@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     
     <head>
@@ -13,26 +13,13 @@
             $(document)
                 .on('pageinit', '#home-page', function () {
 
-                var tolito = TolitoProgressBar('progressbar')
+                TolitoProgressBar('progressbar')
                     .setOuterTheme('b')
-                    .setInnerTheme('e')
+                    .isIndefinite(true)
                     .isMini(true)
-                    .setMax(1000)
-                    .setStartFrom(0)
-                    .setInterval(10)
-                    .showCounter(true)
+                    .showCounter(false)
                     .logOptions()
-                    .build()
-		    .run();
-
-                // set value 300 after 2 seconds and then set value 800 after 3 seconds
-                setTimeout(function () {
-                    tolito.setValue(300);
-                    setTimeout(function () {
-                        tolito.setValue(800);
-                    }, 3000);
-                }, 2000);
-
+                    .build();
             });
         </script>
     </head>

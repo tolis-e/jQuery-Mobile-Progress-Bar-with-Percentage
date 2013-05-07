@@ -1,4 +1,4 @@
-# jQuery-Mobile-Progress-Bar-with-Percentage v1.0.3 (Tolito Progress Bar)
+# jQuery-Mobile-Progress-Bar-with-Percentage v1.0.4 (Tolito Progress Bar)
 
 The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, starts, stops, resumes and explicitly 
 sets the value of a progress bar. In addition the constructor provides the options to set the progress bar's outer 
@@ -28,6 +28,7 @@ each call is made on the same instance.
    * example_7.html: tolito progress bar which stops after 5 seconds and resumes after 3 seconds
    * example_8.html: shows how to set explicitly the tolito progress bar's status
    * example_9.html: shows how to listen the event which notifies that the progress bar is completed
+   * example_10.html: shows how to create an indefinite progress bar
 
 ## Quick Start Guide
 
@@ -145,6 +146,11 @@ each call is made on the same instance.
         setValue(val)
             Usage: Optional
             Description: Explicitly sets the value of the progress bar.
+
+        isIndefinite(bool)
+            Usage: Optional
+            Description: Sets whether the progress bar is indefinite. The bool value must be
+            true or false. The default value is false.
 
 ## License
 
