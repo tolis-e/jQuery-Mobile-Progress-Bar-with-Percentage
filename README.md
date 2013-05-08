@@ -1,8 +1,7 @@
 # jQuery-Mobile-Progress-Bar-with-Percentage v1.0.4 (Tolito Progress Bar)
 
 The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, starts, stops, resumes and explicitly 
-sets the value of a progress bar. In addition the constructor provides the options to set the progress bar's outer 
-theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion 
+sets the value of a progress bar. In addition it provides the options to set the progress bar's outer theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion 
 counter, to set whether the progress bar has normal or mini size, to define the interval which specifies the filling 
 frequency rate, to configure the max value of the outer bar and set the initial value of the filling inner bar. The 
 JavaScript prototype chaining method has been used in order to enable the chaining of separate method calls where 
