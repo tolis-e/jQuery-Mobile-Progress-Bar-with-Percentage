@@ -41,7 +41,7 @@ each call is made on the same instance.
 
     <!-- /jQuery Mobile X.X.X CSS file -->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.css" />
-    <!-- /Tolito 1.0.3 CSS file -->
+    <!-- /Tolito CSS file -->
     <link rel="stylesheet" type="text/css" href="./css/tolito-X.X.X.min.css" />
     <!-- /jQuery X.X.X JS CDN hosted file -->
     <script src="http://code.jquery.com/jquery-X.X.X.min.js"></script>
