@@ -126,6 +126,11 @@ each call is made on the same instance.
             Usage: Optional
             Description: Sets whether a percentage completion counter is appeared or not. The
             bool argument must be true or false. The default value is true.
+            
+        isIndefinite(bool)
+            Usage: Optional
+            Description: Sets whether the progress bar is indefinite. The bool value must be
+            true or false. The default value is false.
 
         logOptions()
             Usage: Optional
@@ -146,11 +151,6 @@ each call is made on the same instance.
         setValue(val)
             Usage: Optional
             Description: Explicitly sets the value of the progress bar.
-
-        isIndefinite(bool)
-            Usage: Optional
-            Description: Sets whether the progress bar is indefinite. The bool value must be
-            true or false. The default value is false.
 
 ## License
 
