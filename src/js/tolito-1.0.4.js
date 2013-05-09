@@ -89,7 +89,7 @@ var ERROR_MSG_TOLITO_BUILT = '[Error]: The tolito progress bar is already built.
     ERROR_MSG_TOLITO_RUNNING = '[Error]: The tolito progress bar is already running.',
     ERROR_MSG_TOLITO_STOPPED = '[Error]: The tolito progress bar is already stopped.',
     ERROR_MSG_TOLITO_INDEFINITE = '[Error]: The tolito progress bar is indefinite.',
-	ERROR_MSG_TOLITO_UNDEFINED = '[Error]: The tolito progress bar element id is undefined';
+    ERROR_MSG_TOLITO_UNDEFINED = '[Error]: The tolito progress bar element id is undefined';
 
 TolitoConstructor = function (elementId) {
     if (elementId === undefined) {
