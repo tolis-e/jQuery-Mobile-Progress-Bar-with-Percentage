@@ -85,9 +85,15 @@ $.widget("mobile.progressbar", {
     }
 });
 
+var ERROR_MSG_TOLITO_BUILT = '[Error]: The tolito progress bar is already built.',
+    ERROR_MSG_TOLITO_RUNNING = '[Error]: The tolito progress bar is already running.',
+    ERROR_MSG_TOLITO_STOPPED = '[Error]: The tolito progress bar is already stopped.',
+    ERROR_MSG_TOLITO_INDEFINITE = '[Error]: The tolito progress bar is indefinite.',
+	ERROR_MSG_TOLITO_UNDEFINED = '[Error]: The tolito progress bar element id is undefined';
+
 TolitoConstructor = function (elementId) {
     if (elementId === undefined) {
-        throw '[Error]: The tolito progress bar element id is undefined';
+        throw ERROR_MSG_TOLITO_UNDEFINED;
     }
     this._id = elementId;
     this._defaultOuterTheme = null;
@@ -105,11 +111,6 @@ TolitoConstructor = function (elementId) {
 TolitoProgressBar = function (arg) {
     return new TolitoConstructor(arg);
 }
-
-var ERROR_MSG_TOLITO_BUILT = '[Error]: The tolito progress bar is already built.',  
-    ERROR_MSG_TOLITO_RUNNING = '[Error]: The tolito progress bar is already running.',
-    ERROR_MSG_TOLITO_STOPPED = '[Error]: The tolito progress bar is already stopped.',
-    ERROR_MSG_TOLITO_INDEFINITE = '[Error]: The tolito progress bar is indefinite.';
 
 TolitoConstructor.prototype = {
     logOptions: function () {
@@ -235,21 +236,24 @@ TolitoConstructor.prototype = {
         } else if (this._indefinite) {
             throw ERROR_MSG_TOLITO_INDEFINITE;
         } else {
-            this.fillProgressBar = setInterval((function (inst) {
-                return function () {
-                    var thisValue = $(['#', inst.getId()].join(""))
-                        .progressbar('option', 'value'),
-                        counter = !isNaN(thisValue) ? (thisValue + 1) : 1;
-                    if (counter > inst.getMax()) {
-                        clearInterval(this.fillProgressBar);
-                    } else {
-                        $(['#', inst.getId()].join(""))
-                            .progressbar({
-                            value: counter
-                        });
+            (function loop(instance) {
+                instance.fillProgressBar = setTimeout((function (inst) {
+                    return function () {
+                        var thisValue = $(['#', inst.getId()].join(""))
+                            .progressbar('option', 'value'),
+                            counter = !isNaN(thisValue) ? (thisValue + 1) : 1;
+                        if (counter > inst.getMax()) {
+                            clearTimeout(this.fillProgressBar);
+                        } else {
+                            $(['#', inst.getId()].join(""))
+                                .progressbar({
+                                value: counter
+                            });
+                            loop(inst);
+                        }
                     }
-                }
-            })(this), this.getInterval());
+                })(instance), instance.getInterval());
+            })(this);
             this._isRunning = true;
             return this;
         }
@@ -258,7 +262,7 @@ TolitoConstructor.prototype = {
         if (!this._isRunning) {
             throw ERROR_MSG_TOLITO_STOPPED;
         } else {
-            clearInterval(this.fillProgressBar);
+            clearTimeout(this.fillProgressBar);
             this._isRunning = false;
             return this;
         }
@@ -269,8 +273,8 @@ TolitoConstructor.prototype = {
         } else {
             $(['#', this.getId()].join(""))
                 .progressbar({
-	            value: val
-	        });
+                value: val
+            });
             return this;
         }
     }
