@@ -243,7 +243,7 @@ TolitoConstructor.prototype = {
                             .progressbar('option', 'value'),
                             counter = !isNaN(thisValue) ? (thisValue + 1) : 1;
                         if (counter > inst.getMax()) {
-                            clearTimeout(this.fillProgressBar);
+                            clearTimeout(inst.fillProgressBar);
                         } else {
                             $(['#', inst.getId()].join(""))
                                 .progressbar({
