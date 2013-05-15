@@ -85,15 +85,15 @@ $.widget("mobile.progressbar", {
     }
 });
 
-var ERROR_MSG_TOLITO_BUILT = '[Error]: The tolito progress bar is already built.',
-    ERROR_MSG_TOLITO_RUNNING = '[Error]: The tolito progress bar is already running.',
-    ERROR_MSG_TOLITO_STOPPED = '[Error]: The tolito progress bar is already stopped.',
-    ERROR_MSG_TOLITO_INDEFINITE = '[Error]: The tolito progress bar is indefinite.',
-    ERROR_MSG_TOLITO_UNDEFINED = '[Error]: The tolito progress bar element id is undefined';
+var ERR_1 = '[Error]: The tolito progress bar is already built.',
+    ERR_2 = '[Error]: The tolito progress bar is already running.',
+    ERR_3 = '[Error]: The tolito progress bar is already stopped.',
+    ERR_4 = '[Error]: The tolito progress bar is indefinite.',
+    ERR_5 = '[Error]: The tolito progress bar element id is undefined';
 
 TolitoConstructor = function (elementId) {
     if (elementId === undefined) {
-        throw ERROR_MSG_TOLITO_UNDEFINED;
+        throw ERR_5;
     }
     this._id = elementId;
     this._defaultOuterTheme = null;
@@ -125,7 +125,7 @@ TolitoConstructor.prototype = {
     },
     setOuterTheme: function (newTheme) {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             this._outerTheme = newTheme;
             return this;
@@ -136,7 +136,7 @@ TolitoConstructor.prototype = {
     },
     setInnerTheme: function (newInnerTheme) {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             this._innerTheme = newInnerTheme;
             return this;
@@ -147,7 +147,7 @@ TolitoConstructor.prototype = {
     },
     setStartFrom: function (newStartFrom) {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             this._startFrom = newStartFrom;
             return this;
@@ -158,7 +158,7 @@ TolitoConstructor.prototype = {
     },
     setMax: function (newMax) {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             this._max = newMax;
             return this;
@@ -169,7 +169,7 @@ TolitoConstructor.prototype = {
     },
     isMini: function (newMini) {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             this._mini = newMini;
             return this;
@@ -180,7 +180,7 @@ TolitoConstructor.prototype = {
     },
     isIndefinite: function (newIndefinite) {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             this._indefinite = newIndefinite;
             return this;
@@ -191,7 +191,7 @@ TolitoConstructor.prototype = {
     },
     showCounter: function (newShowCounter) {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             this._showCounter = newShowCounter;
             return this;
@@ -202,7 +202,7 @@ TolitoConstructor.prototype = {
     },
     setInterval: function (newInterval) {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             this._interval = newInterval;
             return this;
@@ -213,7 +213,7 @@ TolitoConstructor.prototype = {
     },
     build: function () {
         if (this._isBuilt) {
-            throw ERROR_MSG_TOLITO_BUILT;
+            throw ERR_1;
         } else {
             $(['#', this.getId()].join(""))
                 .progressbar({
@@ -232,9 +232,9 @@ TolitoConstructor.prototype = {
     },
     run: function () {
         if (this._isRunning) {
-            throw ERROR_MSG_TOLITO_RUNNING;
+            throw ERR_2;
         } else if (this._indefinite) {
-            throw ERROR_MSG_TOLITO_INDEFINITE;
+            throw ERR_4;
         } else {
             (function loop(instance) {
                 instance.fillProgressBar = setTimeout((function (inst) {
@@ -260,7 +260,7 @@ TolitoConstructor.prototype = {
     },
     stop: function () {
         if (!this._isRunning) {
-            throw ERROR_MSG_TOLITO_STOPPED;
+            throw ERR_3;
         } else {
             clearTimeout(this.fillProgressBar);
             this._isRunning = false;
@@ -269,7 +269,7 @@ TolitoConstructor.prototype = {
     },
     setValue: function (val) {
         if (this._indefinite) {
-            throw ERROR_MSG_TOLITO_INDEFINITE;
+            throw ERR_4;
         } else {
             $(['#', this.getId()].join(""))
                 .progressbar({
