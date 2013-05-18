@@ -1,11 +1,7 @@
 # jQuery-Mobile-Progress-Bar-with-Percentage v1.0.4 (Tolito Progress Bar)
 
-The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, starts, stops, resumes and explicitly 
-sets the value of a progress bar or creates an indefinite loading bar. In addition it provides the options to set the progress bar's outer theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion 
-counter, to set whether the progress bar has normal or mini size, to define the interval which specifies the filling 
-frequency rate, to configure the max value of the outer bar and set the initial value of the filling inner bar. The 
-JavaScript prototype chaining method has been used in order to enable the chaining of separate method calls where 
-each call is made on the same instance. 
+The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, starts, stops, resumes and explicitly sets the value of a progress bar or creates an indefinite loading bar. In addition it provides the options to set the progress bar's outer theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion counter, to set whether the progress bar has normal or mini size, to define the interval which specifies the filling frequency rate, to configure the max value of the outer bar and set the initial value of the filling inner bar. The 
+JavaScript prototype chaining method has been used in order to enable the chaining of separate method calls where each call is made on the same instance. 
 
 ## Compatibility
 
@@ -60,7 +56,7 @@ each call is made on the same instance.
     -------
     Use the following snippet to configure, build and init the progress bar. It is not mandatory 
     to set the options. The TolitoProgressBar constructor expects to receive as an argument 
-    the element id of the div tag created in Step 2.
+    the element id of the div tag created in Step 2. Check the examples for usage instructions.
    
     TolitoProgressBar('progressbar')
         .setOuterTheme('b')
@@ -76,8 +72,8 @@ each call is made on the same instance.
 
     Listen the complete event:
 
-        As soon as the progress bar is completed, a complete event is triggered. The below piece of 
-        code attaches an event handler:
+        When the progress bar is completed, a complete event is triggered. The below piece of code 
+        attaches an event handler:
 
             $(document)
                 .on('complete', '#progressbar', function () {
