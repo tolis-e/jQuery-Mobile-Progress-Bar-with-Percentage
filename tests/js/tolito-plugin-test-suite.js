@@ -12,38 +12,38 @@ var TolitoPluginTestSuite = {},
 (function () 
 {
     if (UtilLib === undefined) 
-	{
+    {
         UtilLib = 
-		{
+        {
             getValue: function (id) 
-			{
+            {
                 return $(['#', id].join("")).progressbar('option', 'value');
             },
             getClass: function (idOrEl) 
-			{
+            {
                 return (typeof idOrEl === 'string' ? $(['#', idOrEl].join("")) : idOrEl).attr("class");
             },
             getChild: function (id, seq) 
-			{
+            {
                 return $(['#', id].join("")).children().eq(seq);
             },
             stringExistsInString: function (str1, str2) 
-			{
+            {
                 return str2.indexOf(str1) != -1;
             }
         }
     }
 
     TolitoPluginTestSuite.run = function () 
-	{
+    {
         QUnit.config.reorder = false;
 
         module("Configuration");
 
         test("Test Setters & Builder", function () 
-		{
+        {
             expect(12);
-			tolito = TolitoProgressBar(PROGRESS_BAR_ELEMENT_ID)
+            tolito = TolitoProgressBar(PROGRESS_BAR_ELEMENT_ID)
                 .setOuterTheme(OUTER_THEME)
                 .setInnerTheme(INNER_THEME)
                 .isMini(MINI)
@@ -52,7 +52,7 @@ var TolitoPluginTestSuite = {},
                 .setInterval(INTERVAL)
                 .showCounter(SHOW_COUNTER)
                 .build();
-			ok(tolito !== undefined, "Progress bar is defined");
+            ok(tolito !== undefined, "Progress bar is defined");
             strictEqual(tolito.getOuterTheme(), OUTER_THEME, "Outer theme setter");
             strictEqual(tolito.getInnerTheme(), INNER_THEME, "Inner theme setter");
             strictEqual(tolito.getMini(), MINI, "Is mini setter");
@@ -76,7 +76,7 @@ var TolitoPluginTestSuite = {},
         module("Functionality");
 
         test("Test Set Value", function () 
-		{
+        {
             expect(3);
             strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), START_FROM, ["Initial value is ", START_FROM].join(""));
             tolito.setValue(10);
@@ -86,28 +86,28 @@ var TolitoPluginTestSuite = {},
         });
 
         test("Test Runner", function () 
-		{
+        {
             expect(3);
             var beforeVal = UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID);
             tolito.run();
             stop();
             setTimeout(function () 
-			{
+            {
                 tolito.stop();
                 var afterVal = UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID);
                 ok(afterVal > beforeVal, "Value after run is greater");
                 stop();
                 setTimeout(function () 
-				{
+                {
                     strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), afterVal, "Value is not changed after stop");
-					tolito.run();
-					stop();
-					setTimeout(function () 
-					{
-						ok(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID) > afterVal, "Run after stop works");
-						tolito.stop();
-						start();
-					}, 50);
+                    tolito.run();
+                    stop();
+                    setTimeout(function () 
+                    {
+                        ok(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID) > afterVal, "Run after stop works");
+                        tolito.stop();
+                        start();
+                    }, 50);
                     start();
                 }, 50);
                 start();
@@ -115,13 +115,13 @@ var TolitoPluginTestSuite = {},
         });
 
         test("Test Event", function () 
-		{
+        {
             expect(1);
             tolito.run();
             stop();
             $(document)
                 .on('complete', ['#', PROGRESS_BAR_ELEMENT_ID].join(""), function () 
-			{
+            {
                 strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), 100, "Value is max when bar is completed");
                 start();
             });
@@ -130,5 +130,5 @@ var TolitoPluginTestSuite = {},
 }());
 
 $(document).on('pageinit', '#test-page', function () {
-	TolitoPluginTestSuite.run();
+    TolitoPluginTestSuite.run();
 });
