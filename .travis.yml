@@ -1,0 +1,4 @@
+language: node_js
+before_script:
+  - echo "before_script phase"
+script: phantomjs tests/js/phantomjs-runner.js file://`pwd`/tests/index.html
