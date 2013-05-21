@@ -9,6 +9,7 @@ JavaScript prototype chaining method has been used in order to enable the chaini
    
    * jQuery 1.8.2 and jQuery Mobile 1.2.0
    * jQuery 1.8.2 and jQuery Mobile 1.3.0
+   * jQuery 1.9.1 and jQuery Mobile 1.3.1
 
 ## Examples Folder
 
