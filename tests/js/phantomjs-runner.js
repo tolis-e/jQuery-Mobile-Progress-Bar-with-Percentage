@@ -43,11 +43,13 @@ function waitFor(testFx, onReady, timeOutMillis)
 
 var page = require('webpage').create();
 
-page.onConsoleMessage = function (msg) {
+page.onConsoleMessage = function (msg) 
+{
     console.log(msg);
 };
 
-page.open(phantom.args[0], function (status) {
+page.open(phantom.args[0], function (status) 
+{
     if (status !== "success") 
     {
         console.log("Failed to access network");
@@ -66,15 +68,19 @@ page.open(phantom.args[0], function (status) {
                     }
                 );
             },//testFx end
-            function () {
+            function () 
+            {
                 var failures = page.evaluate(
                     function () 
                     {
                         var results = document.getElementById('qunit-testresult');
                         console.log(results.innerText);
-                        try {
+                        try 
+                        {
                             return results.getElementsByClassName('failed')[0].innerHTML;
-                        } catch (e) {}
+                        } 
+                        catch (e) {
+                        }
                         return 15000;
                     }
                 );// onReady end
