@@ -75,11 +75,9 @@ page.open(phantom.args[0], function (status)
                     {
                         var results = document.getElementById('qunit-testresult');
                         console.log(results.innerText);
-                        try 
-                        {
+                        try {
                             return results.getElementsByClassName('failed')[0].innerHTML;
-                        } 
-                        catch (e) {
+                        } catch (e) {
                         }
                         return 15000;
                     }
