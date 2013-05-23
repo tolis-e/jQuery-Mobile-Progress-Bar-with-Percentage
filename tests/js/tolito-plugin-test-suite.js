@@ -123,6 +123,7 @@ var TolitoPluginTestSuite = {},
                 .on('complete', ['#', PROGRESS_BAR_ELEMENT_ID].join(""), function () 
             {
                 strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), 100, "Value is max when bar is completed");
+                tolito.destroy();
                 start();
             });
         });
@@ -130,7 +131,6 @@ var TolitoPluginTestSuite = {},
         test("Test Indefinite", function ()
         {
             expect(1);
-            tolito.destroy();
             tolito = TolitoProgressBar(PROGRESS_BAR_ELEMENT_ID)
                 .setOuterTheme(OUTER_THEME)
                 .isMini(MINI)
