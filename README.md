@@ -14,7 +14,7 @@ The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, st
 
 ## Examples Folder
 
-   The examples folder contains 9 sample HTML files.
+   The examples folder contains 11 sample HTML files.
     
    * example_1.html: mini tolito progress bar with percentage counter
    * example_2.html: jQuery Mobile dialog with embedded tolito progress bar
