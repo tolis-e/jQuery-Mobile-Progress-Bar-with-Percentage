@@ -16,21 +16,25 @@ $.widget("mobile.progressbar", {
             innerTheme = this.options.indefinite ? "indefinite" : this.options.innerTheme || parentTheme,
             miniClass = this.options.mini ? " ui-tolito-progressbar-mini" : "",
             counter = this.options.counter;
-        this.element.addClass(['ui-tolito-progressbar ', " ui-tolito-progressbar-outer-", outerTheme, ' ui-tolito-progressbar-corner-all', miniClass].join(""))
+        this.element.addClass(['ui-tolito-progressbar ', " ui-tolito-progressbar-outer-", outerTheme,
+                ' ui-tolito-progressbar-corner-all', miniClass
+        ].join(""))
             .attr({
             role: "progressbar",
             "min-value": this.min,
             "max-value": this.options.max,
             "content-value": this._value()
         });
-        if (counter) {
+        if (counter && !this.options.indefinite) {
             this.labelContent = ($("<div></div>")
                 .text(this._value())
                 .addClass('ui-tolito-progressbar-label ui-tolito-progressbar-corner-all'))
                 .appendTo(this.element);
         }
         this.valueContent = ($("<div></div>")
-            .addClass(['ui-tolito-progressbar-bg ', " ui-tolito-progressbar-active-", innerTheme, ' ui-tolito-progressbar-corner-all'].join("")))
+            .addClass(['ui-tolito-progressbar-bg ', " ui-tolito-progressbar-active-", innerTheme,
+                ' ui-tolito-progressbar-corner-all'
+        ].join("")))
             .appendTo(this.element);
         if (!this.options.indefinite) {
             this._refreshValue();
@@ -85,11 +89,12 @@ $.widget("mobile.progressbar", {
     }
 });
 
-var ERR_1 = '[Error]: The tolito progress bar is already built.',
-    ERR_2 = '[Error]: The tolito progress bar is already running.',
-    ERR_3 = '[Error]: The tolito progress bar is already stopped.',
-    ERR_4 = '[Error]: The tolito progress bar is indefinite.',
-    ERR_5 = '[Error]: The tolito progress bar element id is undefined';
+var ERR_1 = '[Error]: Tolito is already built.',
+    ERR_2 = '[Error]: Tolito is already running.',
+    ERR_3 = '[Error]: Tolito is already stopped.',
+    ERR_4 = '[Error]: Tolito is indefinite.',
+    ERR_5 = '[Error]: Tolito element id is undefined',
+    ERR_6 = '[Error]: Tolito is not built yet.';
 
 TolitoConstructor = function (elementId) {
     if (elementId === undefined) {
@@ -117,7 +122,11 @@ TolitoConstructor.prototype = {
         ((typeof console === "undefined") ? {
             log: function () {}
         } : console)
-            .log(["id: '", this.getId(), "' outerTheme: '", this.getOuterTheme(), "' innerTheme: '", this.getInnerTheme(), "' max: '", this.getMax(), "' mini: '", this.getMini(), "' startFrom: '", this.getStartFrom(), "' interval: '", this.getInterval(), "' showCounter: '", this.getShowCounter(), "'", "' indefinite: '", this.getIndefinite(), "'"].join(""));
+            .log(["id: '", this.getId(), "' outerTheme: '", this.getOuterTheme(), "' innerTheme: '", this.getInnerTheme(),
+                "' max: '", this.getMax(), "' mini: '", this.getMini(), "' startFrom: '", this.getStartFrom(),
+                "' interval: '", this.getInterval(), "' showCounter: '", this.getShowCounter(), "'", "' indefinite: '",
+                this.getIndefinite(), "'"
+        ].join(""));
         return this;
     },
     getId: function () {
@@ -276,6 +285,18 @@ TolitoConstructor.prototype = {
                 value: val
             });
             return this;
+        }
+    },
+    destroy: function () {
+        if (!this._isBuilt) {
+            throw ERR_6;
+        } else {
+            if (this.fillProgressBar) {
+                clearTimeout(this.fillProgressBar);
+            }
+            $(document).off('complete', ['#', this.getId()].join(""));
+            $(['#', this.getId()].join("")).progressbar('destroy');
+            return null;
         }
     }
 };

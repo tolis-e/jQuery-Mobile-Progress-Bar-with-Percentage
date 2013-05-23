@@ -126,6 +126,20 @@ var TolitoPluginTestSuite = {},
                 start();
             });
         });
+
+        test("Test Indefinite", function ()
+        {
+            expect(1);
+            tolito.destroy();
+            tolito = TolitoProgressBar(PROGRESS_BAR_ELEMENT_ID)
+                .setOuterTheme(OUTER_THEME)
+                .isMini(MINI)
+                .isIndefinite(true)
+                .build();
+            var classValue = UtilLib.getClass(UtilLib.getChild(PROGRESS_BAR_ELEMENT_ID, 0));
+            ok(UtilLib.stringExistsInString("ui-tolito-progressbar-active-indefinite", classValue), "Indefinite class exists");
+            tolito.destroy();
+        });
     }
 }());
 

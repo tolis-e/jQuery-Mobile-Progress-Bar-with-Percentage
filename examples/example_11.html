@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     
     <head>
@@ -17,19 +17,15 @@
                     .setOuterTheme('b')
                     .setInnerTheme('e')
                     .isMini(true)
-                    .setMax(1000)
-                    .setStartFrom(0)
+                    .showCounter(false)
                     .setInterval(100)
-                    .showCounter(true)
                     .logOptions()
                     .build()
                     .run();
-
-                // stop after 5 seconds
-                setTimeout(function () {
-                    tolito.stop()
-                }, 5000);
-
+                
+                setTimeout(function() {
+                    tolito.destroy();
+                }, 4000);
             });
         </script>
     </head>
