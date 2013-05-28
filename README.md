@@ -152,7 +152,7 @@ The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, st
 
         destroy()
             Usage: Optional
-            Description: Destroys the progress bar. The progres bar div is rolled back to its
+            Description: Destroys the progress bar. The progress bar div is rolled back to its
             initial state. Removes possible event handler attached to the document element and
             triggered when the progress bar is finished.
 
