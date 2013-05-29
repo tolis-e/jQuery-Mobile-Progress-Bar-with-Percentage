@@ -83,7 +83,7 @@ The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, st
                     // your code
             });
 
-    Configuration Setters, Build and Init procedure:
+    Configuration setters, build, init, stop and destroy functions:
     
         setOuterTheme(theme)
             Usage: Optional
