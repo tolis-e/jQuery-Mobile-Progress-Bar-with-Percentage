@@ -24,7 +24,7 @@ The Tolito Progress Bar is a plugin for jQuery Mobile which creates, manages, st
    * example_6.html: tolito progress bar which stops after 5 seconds
    * example_7.html: tolito progress bar which stops after 5 seconds and resumes after 3 seconds
    * example_8.html: shows how to set explicitly the tolito progress bar's status
-   * example_9.html: shows how to listen the event which notifies that the progress bar is completed
+   * example_9.html: shows how to attach a handler for the event which notifies that the progress bar is completed
    * example_10.html: shows how to create an indefinite progress bar
    * example_11.html: shows how to destroy a created progress bar
 
