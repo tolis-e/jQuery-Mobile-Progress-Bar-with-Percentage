@@ -237,7 +237,6 @@ TolitoConstructor.prototype = {
             this._isBuilt = true;
             return this;
         }
-
     },
     run: function () {
         if (this._isRunning) {
