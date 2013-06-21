@@ -1,5 +1,5 @@
 var TolitoPluginTestSuite = {},
-    UtilLib,
+    Utilities,
     PROGRESS_BAR_ELEMENT_ID = 'progressbar',
     OUTER_THEME = 'b',
     INNER_THEME = 'e',
@@ -11,9 +11,9 @@ var TolitoPluginTestSuite = {},
 
 (function () 
 {
-    if (UtilLib === undefined) 
+    if (Utilities === undefined) 
     {
-        UtilLib = 
+        Utilities = 
         {
             getValue: function (id) 
             {
@@ -60,16 +60,16 @@ var TolitoPluginTestSuite = {},
             strictEqual(tolito.getStartFrom(), START_FROM, "Start from setter");
             strictEqual(tolito.getInterval(), INTERVAL, "Interval setter");
             strictEqual(tolito.getShowCounter(), SHOW_COUNTER, "Show counter setter");
-            var classValue = UtilLib.getClass(PROGRESS_BAR_ELEMENT_ID);
-            ok(UtilLib.stringExistsInString(["ui-tolito-progressbar", MINI ? "-mini" : ""].join(""), classValue),
+            var classValue = Utilities.getClass(PROGRESS_BAR_ELEMENT_ID);
+            ok(Utilities.stringExistsInString(["ui-tolito-progressbar", MINI ? "-mini" : ""].join(""), classValue),
                 "Contains mini or normal class");
-            ok(UtilLib.stringExistsInString(["ui-tolito-progressbar-outer-", OUTER_THEME].join(""), classValue),
+            ok(Utilities.stringExistsInString(["ui-tolito-progressbar-outer-", OUTER_THEME].join(""), classValue),
                 "Contains correct outer theme");
-            var classValueOfFirstChild = UtilLib.getClass(UtilLib.getChild(PROGRESS_BAR_ELEMENT_ID, 0));
-            ok(SHOW_COUNTER ? UtilLib.stringExistsInString("ui-tolito-progressbar-label", classValueOfFirstChild) :
+            var classValueOfFirstChild = Utilities.getClass(UtilLib.getChild(PROGRESS_BAR_ELEMENT_ID, 0));
+            ok(SHOW_COUNTER ? Utilities.stringExistsInString("ui-tolito-progressbar-label", classValueOfFirstChild) :
                 true, "Contains label");
-            var classValueOfSecondChild = UtilLib.getClass(UtilLib.getChild(PROGRESS_BAR_ELEMENT_ID, 1));
-            ok(UtilLib.stringExistsInString(["ui-tolito-progressbar-active-", INNER_THEME].join(""), SHOW_COUNTER ?
+            var classValueOfSecondChild = Utilities.getClass(UtilLib.getChild(PROGRESS_BAR_ELEMENT_ID, 1));
+            ok(Utilities.stringExistsInString(["ui-tolito-progressbar-active-", INNER_THEME].join(""), SHOW_COUNTER ?
                 classValueOfSecondChild : classValueOfFirstChild), "Contains correct inner theme");
         });
 
@@ -78,33 +78,33 @@ var TolitoPluginTestSuite = {},
         test("Test Set Value", function () 
         {
             expect(3);
-            strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), START_FROM, ["Initial value is ", START_FROM].join(""));
+            strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), START_FROM, ["Initial value is ", START_FROM].join(""));
             tolito.setValue(10);
-            strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), 10, "Value is 10");
+            strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), 10, "Value is 10");
             tolito.setValue(START_FROM);
-            strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), START_FROM, ["Value is ", START_FROM].join(""));
+            strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), START_FROM, ["Value is ", START_FROM].join(""));
         });
 
         test("Test Runner", function () 
         {
             expect(3);
-            var beforeVal = UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID);
+            var beforeVal = Utilities.getValue(PROGRESS_BAR_ELEMENT_ID);
             tolito.run();
             stop();
             setTimeout(function () 
             {
                 tolito.stop();
-                var afterVal = UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID);
+                var afterVal = Utilities.getValue(PROGRESS_BAR_ELEMENT_ID);
                 ok(afterVal > beforeVal, "Value after run is greater");
                 stop();
                 setTimeout(function () 
                 {
-                    strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), afterVal, "Value is not changed after stop");
+                    strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), afterVal, "Value is not changed after stop");
                     tolito.run();
                     stop();
                     setTimeout(function () 
                     {
-                        ok(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID) > afterVal, "Run after stop works");
+                        ok(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID) > afterVal, "Run after stop works");
                         tolito.stop();
                         start();
                     }, 50);
@@ -122,7 +122,7 @@ var TolitoPluginTestSuite = {},
             $(document)
                 .on('complete', ['#', PROGRESS_BAR_ELEMENT_ID].join(""), function () 
             {
-                strictEqual(UtilLib.getValue(PROGRESS_BAR_ELEMENT_ID), 100, "Value is max when bar is completed");
+                strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), 100, "Value is max when bar is completed");
                 start();
             });
         });
@@ -136,8 +136,8 @@ var TolitoPluginTestSuite = {},
                 .isMini(MINI)
                 .isIndefinite(true)
                 .build();
-            var classValue = UtilLib.getClass(UtilLib.getChild(PROGRESS_BAR_ELEMENT_ID, 0));
-            ok(UtilLib.stringExistsInString("ui-tolito-progressbar-active-indefinite", classValue), "Indefinite class exists");
+            var classValue = Utilities.getClass(Utilities.getChild(PROGRESS_BAR_ELEMENT_ID, 0));
+            ok(Utilities.stringExistsInString("ui-tolito-progressbar-active-indefinite", classValue), "Indefinite class exists");
             tolito.destroy();
         });
     }
