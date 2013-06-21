@@ -65,10 +65,10 @@ var TolitoPluginTestSuite = {},
                 "Contains mini or normal class");
             ok(Utilities.stringExistsInString(["ui-tolito-progressbar-outer-", OUTER_THEME].join(""), classValue),
                 "Contains correct outer theme");
-            var classValueOfFirstChild = Utilities.getClass(UtilLib.getChild(PROGRESS_BAR_ELEMENT_ID, 0));
+            var classValueOfFirstChild = Utilities.getClass(Utilities.getChild(PROGRESS_BAR_ELEMENT_ID, 0));
             ok(SHOW_COUNTER ? Utilities.stringExistsInString("ui-tolito-progressbar-label", classValueOfFirstChild) :
                 true, "Contains label");
-            var classValueOfSecondChild = Utilities.getClass(UtilLib.getChild(PROGRESS_BAR_ELEMENT_ID, 1));
+            var classValueOfSecondChild = Utilities.getClass(Utilities.getChild(PROGRESS_BAR_ELEMENT_ID, 1));
             ok(Utilities.stringExistsInString(["ui-tolito-progressbar-active-", INNER_THEME].join(""), SHOW_COUNTER ?
                 classValueOfSecondChild : classValueOfFirstChild), "Contains correct inner theme");
         });
