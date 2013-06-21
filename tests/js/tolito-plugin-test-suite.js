@@ -85,7 +85,7 @@ var TolitoPluginTestSuite = {},
             strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), START_FROM, ["Value is ", START_FROM].join(""));
         });
 
-        test("Test Runner", function () 
+        test("Test Run", function () 
         {
             expect(3);
             var beforeVal = Utilities.getValue(PROGRESS_BAR_ELEMENT_ID);
@@ -114,7 +114,7 @@ var TolitoPluginTestSuite = {},
             }, 100);
         });
 
-        test("Test Event", function () 
+        test("Test Event Fire", function () 
         {
             expect(1);
             tolito.run();
