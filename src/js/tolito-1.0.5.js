@@ -19,7 +19,7 @@
                 counter = this.options.counter;
             this.element.addClass(['ui-tolito-progressbar ', " ui-tolito-progressbar-outer-", outerTheme,
                 ' ui-tolito-progressbar-corner-all', miniClass
-            ].join(""))
+                ].join(""))
                 .attr({
                     role: "progressbar",
                     "min-value": this.min,
@@ -35,7 +35,7 @@
             this.valueContent = ($("<div></div>")
                 .addClass(['ui-tolito-progressbar-bg ', " ui-tolito-progressbar-active-", innerTheme,
                 ' ui-tolito-progressbar-corner-all'
-            ].join("")))
+                ].join("")))
                 .appendTo(this.element);
             if (!this.options.indefinite) {
                 this._refreshValue();
