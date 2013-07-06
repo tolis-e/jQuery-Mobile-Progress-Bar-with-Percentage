@@ -120,7 +120,7 @@
                 "' max: '", this.getMax(), "' mini: '", this.getMini(), "' startFrom: '", this.getStartFrom(),
                 "' interval: '", this.getInterval(), "' showCounter: '", this.getShowCounter(), "'", "' indefinite: '",
                 this.getIndefinite(), "'"
-        ].join(""));
+                ].join(""));
             return this;
         },
         getId: function () {
