@@ -76,7 +76,7 @@ The jQuery-Mobile-Progress-Bar-with-Percentage is a plugin for jQuery Mobile whi
     Listen the complete event:
 
         When the progress bar is completed, a complete event is triggered. The below piece of code 
-        attaches an event handler:
+        attaches an event handler to the document element:
 
             $(document)
                 .on('complete', '#progressbar', function () {
