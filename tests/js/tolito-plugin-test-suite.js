@@ -122,7 +122,7 @@ var TolitoPluginTestSuite = {},
             $(document)
                 .on('complete', ['#', PROGRESS_BAR_ELEMENT_ID].join(""), function () 
             {
-                strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), 100, "Value is max when bar is completed");
+                strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), MAX, "Value is max when bar is completed");
                 start();
             });
         });
