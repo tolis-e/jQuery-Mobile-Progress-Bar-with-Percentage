@@ -1,0 +1,201 @@
+@mixin background-image-color( $color1, $color2){
+  background-image: linear-gradient( $color1,  $color2);
+  background-image: -moz-linear-gradient( $color1, $color2);
+  background-image: -ms-linear-gradient( $color1, $color2);
+  background-image: -o-linear-gradient( $color1, $color2);
+  background-image: -webkit-gradient(linear, left top, left bottom, from( $color1), to( $color2));
+  background-image: -webkit-linear-gradient( $color1, $color2);
+}
+
+@mixin tolito-state-base($background, $gradient1, $gradient2, $color, $text-shadow){
+  background: $background;
+  @include background-image-color($gradient1, $gradient2);
+  color: $color;
+  font-weight: bold;
+  text-shadow: 0 1px 1px $text-shadow;
+}
+
+@mixin ui-tolito-progressbar-outer-X($background, $gradient1, $gradient2, $border, $color, $text-shadow){
+  @include tolito-state-base($background, $gradient1, $gradient2, $color, $text-shadow);
+  border: 1px solid $border;
+}
+
+@mixin ui-tolito-progressbar-active-X($background, $gradient1, $gradient2, $color, $text-shadow){
+  @include tolito-state-base($background, $gradient1, $gradient2, $color, $text-shadow);
+  text-decoration: none;
+}
+
+
+.ui-tolito-progressbar
+{
+	height: 30px;
+	margin: 5em, 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	top: 4px;
+	width: 100%;
+}
+.ui-tolito-progressbar-mini
+{
+	height: 20px;
+	margin: 5em, 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	top: 4px;
+	width: 100%;
+}
+.ui-tolito-progressbar-bg
+{
+	border: none;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+.ui-tolito-progressbar-label
+{
+	border: none;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	vertical-align: text-top;
+	width: 100%;
+	z-index: 2;
+}
+.ui-tolito-progressbar-outer-a{
+  @include ui-tolito-progressbar-outer-X(#222, #202020, #2c2c2c, #000, #fff, #111);
+}
+
+.ui-tolito-progressbar-outer-b{
+  @include ui-tolito-progressbar-outer-X(#4e89c5, #295b8e, #3e79b5, #225377, #fff, #194b7e);
+}
+.ui-tolito-progressbar-outer-c
+{
+  @include ui-tolito-progressbar-outer-X(#d6d6d6, #d0d0d0, #dfdfdf, #bbb, #222, #fff);
+}
+.ui-tolito-progressbar-outer-d{
+   @include ui-tolito-progressbar-outer-X(#eee, #e5e5e5, #f2f2f2, #aaa, #333, #fff);
+ }
+.ui-tolito-progressbar-outer-e{
+  @include ui-tolito-progressbar-outer-X(#fceda7, #f8d94c, #fadb4e, #f2c43d, #111, #fff);
+}
+.ui-tolito-progressbar-active-indefinite
+{
+    background: url("../images/indefinite-bg.gif");
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 1px 1px #3373a5;
+}
+.ui-tolito-progressbar-active-a
+{
+  @include ui-tolito-progressbar-active-X(#333333, #3C3C3C, #111111, #fff, #3373a5);
+}
+.ui-tolito-progressbar-active-b
+{
+  @include ui-tolito-progressbar-active-X(#456F9A, #6FACD5, #497BAE, #fff, #3373a5);
+}
+.ui-tolito-progressbar-active-c
+{
+  @include ui-tolito-progressbar-active-X(#B3B3B3, #F0F0F0, #DDDDDD, #fff, #3373a5);
+}
+.ui-tolito-progressbar-active-d
+{
+  @include ui-tolito-progressbar-active-X(#BBBBBB, #DDDDDD, #BBBBBB, #fff, #3373a5);
+}
+.ui-tolito-progressbar-active-e
+{
+  @include ui-tolito-progressbar-active-X(#F7C942, #FCEDA7, #FBEF7E, #fff, #3373a5);
+}
+.ui-tolito-progressbar-corner-all
+{
+	border-radius: 1em;
+	moz-border-radius: 1em;
+	webkit-border-radius: 1em;
+}
+.ui-tolito-progressbar-overlay
+{
+	background-color: #000000;
+	bottom: 0;
+	left: 0;
+	min-height: 100%;
+	position: fixed;
+	right: 0;
+	width: 100%;
+}
+.ui-tolito-progressbar-overlay-box
+{
+	margin: 10% auto 15px auto;
+	max-width: 500px;
+	padding: 0;
+	position: relative;
+	top: -15px;
+	width: 92.5%;
+}
+.ui-tolito-progressbar-overlay-box-corner-top
+{
+	border-top-left-radius: .6em;
+	border-top-right-radius: .6em;
+	moz-border-radius-topleft: .6em;
+	moz-border-radius-topright: .6em;
+	webkit-border-top-left-radius: .6em;
+	webkit-border-top-right-radius: .6em;
+}
+.ui-tolito-progressbar-overlay-box-corner-bottom
+{
+	border-bottom-left-radius: .6em;
+	border-bottom-right-radius: .6em;
+	moz-border-radius-bottomleft: .6em;
+	moz-border-radius-bottomright: .6em;
+	webkit-border-bottom-left-radius: .6em;
+	webkit-border-bottom-right-radius: .6em;
+}
+.ui-tolito-progressbar-overlay-box-body-c
+{
+	background: #f9f9f9;
+	background-image: linear-gradient( #f9f9f9 , #eee );
+	background-image: -moz-linear-gradient( #f9f9f9 , #eee );
+	background-image: -ms-linear-gradient( #f9f9f9 , #eee );
+	background-image: -o-linear-gradient( #f9f9f9 , #eee );
+	background-image: -webkit-gradient(linear, left top, left bottom, from( #f9f9f9 ), to( #eee ));
+	background-image: -webkit-linear-gradient( #f9f9f9 , #eee );
+	border: 1px solid #aaa;
+	color: #333;
+	text-shadow: 0 1px 0 #fff;
+}
+.ui-tolito-progressbar-overlay-box-body-c, .ui-tolito-progressbar-overlay-box-body-c input, .ui-tolito-progressbar-overlay-box-body-c select, .ui-tolito-progressbar-overlay-box-body-c textarea, .ui-tolito-progressbar-overlay-box-body-c button
+{
+	font-family: Helvetica, Arial, sans-serif;
+}
+.ui-tolito-progressbar-overlay-box-body-c .ui-link-inherit
+{
+	color: #333;
+}
+.ui-tolito-progressbar-overlay-box-body-c .ui-link
+{
+	color: #2489ce;
+	font-weight: bold;
+}
+.ui-tolito-progressbar-overlay-box-body-c .ui-link:visited
+{
+	color: #2489ce;
+}
+.ui-tolito-progressbar-overlay-box-body-c .ui-link:hover
+{
+	color: #2489ce;
+}
+.ui-tolito-progressbar-overlay-box-body-c .ui-link:active
+{
+	color: #2489ce;
+}
+.ui-tolito-progressbar-overlay-box-content
+{
+	border-width: 0;
+	overflow: visible;
+	overflow-x: hidden;
+	padding: 15px;
+}
