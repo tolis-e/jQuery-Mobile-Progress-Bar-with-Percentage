@@ -156,10 +156,10 @@ The jQuery-Mobile-Progress-Bar-with-Percentage is a plugin for jQuery Mobile whi
             initial state. Removes possible event handler attached to the document element and
             triggered when the progress bar is finished.
 
-## Customizing the default progress bar Themes
+## Themes Customization
 CSS files included in the current project  are for the default jQuery Mobile themes. If you use a customized theme, you might want to change CSS colors to match your theme. You can find instructions for customizing the default jQuery Mobile themes [here](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/README-customize-themes.md).
 
-Special thanks to [Michael Kariv](https://github.com/michaelkariv) for creating the [SASS](http://sass-lang.com/) file.
+Special thanks to [Michael Kariv](https://github.com/michaelkariv) for creating the [SASS](http://sass-lang.com/) file and the corresponding README guide.
 
 ## License
 
