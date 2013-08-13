@@ -11,4 +11,4 @@ Here are your steps to generate a CSS file with customized themes:
 - css file will be automatically generated
 - currently [tolito.scss](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/src/scss/tolito.scss) has values that produce the css file identical to [tolito-1.0.5.css](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/src/css/tolito-1.0.5.css).
 
-**Do not forget to add the jQuery MIT License in the produced CSS file.**
+**Don't forget to add the jQuery MIT License in the produced CSS file.**
