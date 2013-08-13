@@ -157,7 +157,7 @@ The jQuery-Mobile-Progress-Bar-with-Percentage (Tolito progress bar) is a plugin
             triggered when the progress bar is finished.
 
 ## Themes Customization
-CSS files included in the current project  are for the default jQuery Mobile themes. If you use a customized theme, you might want to change CSS colors to match your theme. You can find instructions for customizing the default jQuery Mobile themes [here](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/README-customize-themes.md).
+The CSS included in the current project contains the default jQuery Mobile themes. If you use a customized theme, you might want to change CSS colors to match your theme. You can find instructions for customizing the default jQuery Mobile themes [here](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/README-customize-themes.md).
 
 Special thanks to [Michael Kariv](https://github.com/michaelkariv) for creating the [SASS](http://sass-lang.com/) [tolito.scss](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/src/scss/tolito.scss) file and the corresponding [README](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/README-customize-themes.md) guide.
 
