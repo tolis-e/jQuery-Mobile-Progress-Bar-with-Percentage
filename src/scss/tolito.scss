@@ -113,9 +113,9 @@
 }
 .ui-tolito-progressbar-corner-all
 {
+	-moz-border-radius: 1em;
+	-webkit-border-radius: 1em;
 	border-radius: 1em;
-	moz-border-radius: 1em;
-	webkit-border-radius: 1em;
 }
 .ui-tolito-progressbar-overlay
 {
@@ -138,21 +138,21 @@
 }
 .ui-tolito-progressbar-overlay-box-corner-top
 {
+	-moz-border-radius-topleft: .6em;
+	-moz-border-radius-topright: .6em;
+	-webkit-border-top-left-radius: .6em;
+	-webkit-border-top-right-radius: .6em;
 	border-top-left-radius: .6em;
 	border-top-right-radius: .6em;
-	moz-border-radius-topleft: .6em;
-	moz-border-radius-topright: .6em;
-	webkit-border-top-left-radius: .6em;
-	webkit-border-top-right-radius: .6em;
 }
 .ui-tolito-progressbar-overlay-box-corner-bottom
 {
+	-moz-border-radius-bottomleft: .6em;
+	-moz-border-radius-bottomright: .6em;
+	-webkit-border-bottom-left-radius: .6em;
+	-webkit-border-bottom-right-radius: .6em;
 	border-bottom-left-radius: .6em;
 	border-bottom-right-radius: .6em;
-	moz-border-radius-bottomleft: .6em;
-	moz-border-radius-bottomright: .6em;
-	webkit-border-bottom-left-radius: .6em;
-	webkit-border-bottom-right-radius: .6em;
 }
 .ui-tolito-progressbar-overlay-box-body-c
 {
