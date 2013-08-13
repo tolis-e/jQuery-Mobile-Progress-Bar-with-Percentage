@@ -163,7 +163,7 @@ Special thanks to [Michael Kariv](https://github.com/michaelkariv) for creating 
 
 ## License
 
-Apache License Version 2.0 / Check the LICENSE.txt file for more details.
+jQuery MIT-License / Check the MIT-LICENSE.txt file for more details.
 
 ## GitHub repository
 
