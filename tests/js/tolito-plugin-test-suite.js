@@ -36,8 +36,6 @@ var TolitoPluginTestSuite = {},
 
     TolitoPluginTestSuite.run = function () 
     {
-        QUnit.config.reorder = false;
-
         module("Configuration");
 
         test("Test Setters & Builder", function () 
