@@ -1,5 +1,6 @@
 var TolitoPluginTestSuite = {},
     Utilities,
+    tolito,
     PROGRESS_BAR_ELEMENT_ID = 'progressbar',
     OUTER_THEME = 'b',
     INNER_THEME = 'e',
@@ -9,36 +10,36 @@ var TolitoPluginTestSuite = {},
     INTERVAL = 50,
     SHOW_COUNTER = true;
 
-(function () 
+(function ()
 {
-    if (Utilities === undefined) 
+    if (Utilities === undefined)
     {
-        Utilities = 
+        Utilities =
         {
-            getValue: function (id) 
+            getValue: function (id)
             {
                 return $(['#', id].join("")).progressbar('option', 'value');
             },
-            getClass: function (idOrEl) 
+            getClass: function (idOrEl)
             {
                 return (typeof idOrEl === 'string' ? $(['#', idOrEl].join("")) : idOrEl).attr("class");
             },
-            getChild: function (id, seq) 
+            getChild: function (id, seq)
             {
                 return $(['#', id].join("")).children().eq(seq);
             },
-            stringExistsInString: function (str1, str2) 
+            stringExistsInString: function (str1, str2)
             {
-                return str2.indexOf(str1) != -1;
+                return str2.indexOf(str1) !== -1;
             }
-        }
+        };
     }
 
-    TolitoPluginTestSuite.run = function () 
+    TolitoPluginTestSuite.run = function ()
     {
         module("Configuration");
 
-        test("Test Setters & Builder", function () 
+        test("Test Setters & Builder", function ()
         {
             expect(12);
             tolito = TolitoProgressBar(PROGRESS_BAR_ELEMENT_ID)
@@ -73,7 +74,7 @@ var TolitoPluginTestSuite = {},
 
         module("Functionality");
 
-        test("Test Set Value", function () 
+        test("Test Set Value", function ()
         {
             expect(3);
             strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), START_FROM, ["Initial value is ", START_FROM].join(""));
@@ -83,24 +84,24 @@ var TolitoPluginTestSuite = {},
             strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), START_FROM, ["Value is ", START_FROM].join(""));
         });
 
-        test("Test Run", function () 
+        test("Test Run", function ()
         {
             expect(3);
             var beforeVal = Utilities.getValue(PROGRESS_BAR_ELEMENT_ID);
             tolito.run();
             stop();
-            setTimeout(function () 
+            setTimeout(function ()
             {
                 tolito.stop();
                 var afterVal = Utilities.getValue(PROGRESS_BAR_ELEMENT_ID);
                 ok(afterVal > beforeVal, "Value after run is greater");
                 stop();
-                setTimeout(function () 
+                setTimeout(function ()
                 {
                     strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), afterVal, "Value is not changed after stop");
                     tolito.run();
                     stop();
-                    setTimeout(function () 
+                    setTimeout(function ()
                     {
                         ok(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID) > afterVal, "Run after stop works");
                         tolito.stop();
@@ -112,13 +113,13 @@ var TolitoPluginTestSuite = {},
             }, 100);
         });
 
-        test("Test Event Fire", function () 
+        test("Test Event Fire", function ()
         {
             expect(1);
             tolito.run();
             stop();
             $(document)
-                .on('complete', ['#', PROGRESS_BAR_ELEMENT_ID].join(""), function () 
+                .on('complete', ['#', PROGRESS_BAR_ELEMENT_ID].join(""), function ()
             {
                 strictEqual(Utilities.getValue(PROGRESS_BAR_ELEMENT_ID), MAX, "Value is max when bar is completed");
                 start();
@@ -138,7 +139,7 @@ var TolitoPluginTestSuite = {},
             ok(Utilities.stringExistsInString("ui-tolito-progressbar-active-indefinite", classValue), "Indefinite class exists");
             tolito.destroy();
         });
-    }
+    };
 }());
 
 $(document).on('pageinit', '#test-page', function () {

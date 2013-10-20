@@ -1,0 +1,32 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "latedef": true,
+    "noarg": true,
+    "noempty": true,
+    "undef": true,
+    "sub": true,
+    "trailing": true,
+    "node": true,
+    "globals": {
+        "asyncTest": true,
+        "deepEqual": true,
+        "equal": true,
+        "expect": true,
+        "module": true,
+        "notDeepEqual": true,
+        "notEqual": true,
+        "notStrictEqual": true,
+        "ok": true,
+        "raises": true,
+        "start": true,
+        "stop": true,
+        "strictEqual": true,
+        "test": true,
+        "document": true,
+        "jQuery": true,
+        "TolitoProgressBar": true,
+        "$": true,
+        "QUnit": true
+    }
+}

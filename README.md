@@ -1,4 +1,4 @@
-# jQuery-Mobile-Progress-Bar-with-Percentage v1.0.5
+# jQuery-Mobile-Progress-Bar-with-Percentage v1.0.6
 
 The jQuery-Mobile-Progress-Bar-with-Percentage (Tolito progress bar) is a plugin for jQuery Mobile which creates, manages, starts, stops, resumes and explicitly sets the value of a progress bar or creates an indefinite loading bar. In addition it provides the options to set the progress bar's outer theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion counter, to set whether the progress bar has normal or mini size, to define the interval which specifies the filling frequency rate, to configure the max value of the outer bar and set the initial value of the filling inner bar. The JavaScript prototype chaining method is used in order to enable the chaining of separate method calls where each call is made on the same instance. 
 
@@ -11,6 +11,7 @@ The jQuery-Mobile-Progress-Bar-with-Percentage (Tolito progress bar) is a plugin
    * jQuery 1.8.2 and jQuery Mobile 1.2.0
    * jQuery 1.8.2 and jQuery Mobile 1.3.0
    * jQuery 1.9.1 and jQuery Mobile 1.3.1
+   * jQuery 1.9.1 and jQuery Mobile 1.3.2
 
 ## Examples Folder
 
@@ -28,6 +29,28 @@ The jQuery-Mobile-Progress-Bar-with-Percentage (Tolito progress bar) is a plugin
    * example_10.html: shows how to create an indefinite progress bar
    * example_11.html: shows how to destroy a created progress bar
 
+## Building
+
+### Grunt
+
+[Grunt](http://gruntjs.com/) is used as the build tool which requires [Node.js](http://nodejs.org/) version >= 0.8.0.
+Please refer to [nodejs.org](http://nodejs.org) for details regarding installing Node.js.
+Please refer to Grunt's [getting started](http://gruntjs.com/getting-started) guide for details regarding installing Grunt.
+
+### Installing Build Dependencies
+To install the dependencies of the projecti, navigate to the project's root folder and run the following command:
+
+    $ npm install
+
+This will install the versions of the dependencies declared in package.json. This is only required to be done once before
+building the first time, or if the dependencies in package.json have been updated.
+
+### Building the project
+
+    $ grunt
+
+The produced JavaScript and CSS files will be in the __dist__ directory.
+
 ## Quick Start Guide
 
     Step 1
@@ -40,13 +63,13 @@ The jQuery-Mobile-Progress-Bar-with-Percentage (Tolito progress bar) is a plugin
     <!-- /jQuery Mobile X.X.X CSS file -->
     <link rel="stylesheet" href="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.css" />
     <!-- /Tolito CSS file -->
-    <link rel="stylesheet" type="text/css" href="./css/tolito-X.X.X.min.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/css/jQuery-Mobile-Progress-Bar-with-Percentage.min.css" />
     <!-- /jQuery X.X.X JS CDN hosted file -->
     <script src="http://code.jquery.com/jquery-X.X.X.min.js"></script>
     <!-- /jQuery Mobile X.X.X JS CDN hosted file -->
     <script src="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.js"></script>
     <!-- /Tolito JS file -->
-    <script type="text/javascript" src="./js/tolito-X.X.X.min.js"></script>
+    <script type="text/javascript" src="./dist/js/jQuery-Mobile-Progress-Bar-with-Percentage.min.js"></script>
 
     Step 2
     -------

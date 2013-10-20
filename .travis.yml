@@ -2,5 +2,6 @@ language: node_js
 node_js:
   - 0.11
 before_script:
-  - echo "before_script phase"
-script: phantomjs tests/js/phantomjs-runner.js file://`pwd`/tests/index.html
+  - npm install -g grunt-cli
+  - npm install
+script: grunt

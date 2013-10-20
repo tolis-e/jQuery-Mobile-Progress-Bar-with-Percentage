@@ -89,13 +89,13 @@
             this.oldValue = value;
             this.valueContent.css("width", [this._percentage(), '%'].join(""));
             if ((typeof this.labelContent !== "undefined")) {
-                this.labelContent.text([this._percentage(), '%'].join(""))
+                this.labelContent.text([this._percentage(), '%'].join(""));
             }
             this.element.attr("content-value", value);
         }
     });
 
-    TolitoConstructor = function (elementId) {
+    var TolitoConstructor = function (elementId) {
         if (elementId === undefined) {
             throw '[Error]: Tolito element id is undefined';
         }
@@ -110,11 +110,11 @@
         this._isRunning = false;
         this._indefinite = false;
         return this;
-    }
+    };
 
     TolitoProgressBar = function (arg) {
         return new TolitoConstructor(arg);
-    }
+    };
 
     TolitoConstructor.prototype = {
         logOptions: function () {
@@ -258,7 +258,7 @@
                                     });
                                 loop(inst);
                             }
-                        }
+                        };
                     })(instance), instance.getInterval());
                 })(this);
                 this._isRunning = true;
