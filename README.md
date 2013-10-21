@@ -38,7 +38,7 @@ Please refer to [nodejs.org](http://nodejs.org) for details regarding installing
 Please refer to Grunt's [getting started](http://gruntjs.com/getting-started) guide for details regarding installing Grunt.
 
 ### Installing Build Dependencies
-To install the dependencies of the projecti, navigate to the project's root folder and run the following command:
+To install the dependencies of the project, navigate to the project's root folder and run the following command:
 
     $ npm install
 
