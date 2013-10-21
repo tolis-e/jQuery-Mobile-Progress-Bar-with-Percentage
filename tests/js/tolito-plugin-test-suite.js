@@ -12,6 +12,12 @@ var TolitoPluginTestSuite = {},
 
 (function ()
 {
+    if (QUnit !== undefined && QUnit.config !== undefined)
+    {
+        // TODO: Setup test suite so that order does not matter and no tests rely on previous tests
+        QUnit.config.reorder = false;
+    }
+
     if (Utilities === undefined)
     {
         Utilities =
