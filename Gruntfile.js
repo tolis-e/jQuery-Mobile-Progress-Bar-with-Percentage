@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
                 '<%= grunt.template.today("yyyy-mm-dd") %><%= "\\n" %>' +
                 '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
-                ' * Copyright 2013 jQuery Foundation and other contributors<%= "\\n" %>' +
+                ' * Copyright 2014 jQuery Foundation and other contributors<%= "\\n" %>' +
                 ' * Released under the MIT license.<%= "\\n" %>' +
                 ' * <%= pkg.licenses[0].url + "\\n" %>' +
                 ' */' +
