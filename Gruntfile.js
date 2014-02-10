@@ -37,11 +37,11 @@ module.exports = function(grunt) {
                 banner: '<%= meta.banner %>'
             },
             js: {
-                src: ['src/js/tolito-<%= pkg.version %>.js'],
+                src: ['src/js/jQMProgressBar-<%= pkg.version %>.js'],
                 dest: 'dist/js/<%= pkg.name %>.js'
             },
             css: {
-                src: ['src/css/tolito-<%= pkg.version %>.css'],
+                src: ['src/css/jQMProgressBar-<%= pkg.version %>.css'],
                 dest: 'dist/css/<%= pkg.name %>.css'
             }
         },

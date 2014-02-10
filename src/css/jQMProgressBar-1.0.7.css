@@ -3,7 +3,7 @@
  * Released under the MIT license.
  * http://jquery.org/license
  */
-.ui-tolito-progressbar
+.ui-jqm-progressbar
 {
     height: 30px;
     margin: 5em, 0;
@@ -13,7 +13,7 @@
     top: 4px;
     width: 100%;
 }
-.ui-tolito-progressbar-mini
+.ui-jqm-progressbar-mini
 {
     height: 20px;
     margin: 5em, 0;
@@ -23,7 +23,7 @@
     top: 4px;
     width: 100%;
 }
-.ui-tolito-progressbar-bg
+.ui-jqm-progressbar-bg
 {
     border: none;
     height: 100%;
@@ -32,7 +32,7 @@
     width: 100%;
     z-index: 1;
 }
-.ui-tolito-progressbar-label
+.ui-jqm-progressbar-label
 {
     border: none;
     height: 100%;
@@ -43,7 +43,7 @@
     width: 100%;
     z-index: 2;
 }
-.ui-tolito-progressbar-outer-a
+.ui-jqm-progressbar-outer-a
 {
     background: #222;
     background-image: linear-gradient( #202020, #2c2c2c);
@@ -57,7 +57,7 @@
     font-weight: bold;
     text-shadow: 0 1px 1px #111;
 }
-.ui-tolito-progressbar-outer-b
+.ui-jqm-progressbar-outer-b
 {
     background: #4e89c5;
     background-image: linear-gradient( #295b8e, #3e79b5);
@@ -71,7 +71,7 @@
     font-weight: bold;
     text-shadow: 0 1px 1px #194b7e;
 }
-.ui-tolito-progressbar-outer-c
+.ui-jqm-progressbar-outer-c
 {
     background: #d6d6d6;
     background-image: linear-gradient( #d0d0d0, #dfdfdf);
@@ -85,7 +85,7 @@
     font-weight: bold;
     text-shadow: 0 1px 0 #fff;
 }
-.ui-tolito-progressbar-outer-d
+.ui-jqm-progressbar-outer-d
 {
     background: #eee;
     background-image: linear-gradient( #e5e5e5, #f2f2f2);
@@ -99,7 +99,7 @@
     font-weight: bold;
     text-shadow: 0 1px 0 #fff;
 }
-.ui-tolito-progressbar-outer-e
+.ui-jqm-progressbar-outer-e
 {
     background: #fceda7;
     background-image: linear-gradient( #f8d94c, #fadb4e);
@@ -113,7 +113,7 @@
     font-weight: bold;
     text-shadow: 0 1px 0 #fff;
 }
-.ui-tolito-progressbar-active-indefinite
+.ui-jqm-progressbar-active-indefinite
 {
     background: url("../images/indefinite-bg.gif");
     color: #fff;
@@ -121,7 +121,7 @@
     text-decoration: none;
     text-shadow: 0 1px 1px #3373a5;
 }
-.ui-tolito-progressbar-active-a
+.ui-jqm-progressbar-active-a
 {
     background: #333333;
     background-image: linear-gradient( #3C3C3C, #111111);
@@ -135,7 +135,7 @@
     text-decoration: none;
     text-shadow: 0 1px 1px #3373a5;
 }
-.ui-tolito-progressbar-active-b
+.ui-jqm-progressbar-active-b
 {
     background: #456F9A;
     background-image: linear-gradient( #6FACD5, #497BAE);
@@ -149,7 +149,7 @@
     text-decoration: none;
     text-shadow: 0 1px 1px #3373a5;
 }
-.ui-tolito-progressbar-active-c
+.ui-jqm-progressbar-active-c
 {
     background: #B3B3B3;
     background-image: linear-gradient( #F0F0F0, #DDDDDD);
@@ -163,7 +163,7 @@
     text-decoration: none;
     text-shadow: 0 1px 1px #3373a5;
 }
-.ui-tolito-progressbar-active-d
+.ui-jqm-progressbar-active-d
 {
     background: #BBBBBB;
     background-image: linear-gradient( #DDDDDD, #BBBBBB);
@@ -177,7 +177,7 @@
     text-decoration: none;
     text-shadow: 0 1px 1px #3373a5;
 }
-.ui-tolito-progressbar-active-e
+.ui-jqm-progressbar-active-e
 {
     background: #F7C942;
     background-image: linear-gradient( #FCEDA7, #FBEF7E);
@@ -191,13 +191,13 @@
     text-decoration: none;
     text-shadow: 0 1px 1px #3373a5;
 }
-.ui-tolito-progressbar-corner-all
+.ui-jqm-progressbar-corner-all
 {
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
     border-radius: 1em;
 }
-.ui-tolito-progressbar-overlay
+.ui-jqm-progressbar-overlay
 {
     background-color: #000000;
     bottom: 0;
@@ -207,7 +207,7 @@
     right: 0;
     width: 100%;
 }
-.ui-tolito-progressbar-overlay-box
+.ui-jqm-progressbar-overlay-box
 {
     margin: 10% auto 15px auto;
     max-width: 500px;
@@ -216,7 +216,7 @@
     top: -15px;
     width: 92.5%;
 }
-.ui-tolito-progressbar-overlay-box-corner-top
+.ui-jqm-progressbar-overlay-box-corner-top
 {
     -moz-border-radius-topleft: .6em;
     -moz-border-radius-topright: .6em;
@@ -225,7 +225,7 @@
     border-top-left-radius: .6em;
     border-top-right-radius: .6em;
 }
-.ui-tolito-progressbar-overlay-box-corner-bottom
+.ui-jqm-progressbar-overlay-box-corner-bottom
 {
     -moz-border-radius-bottomleft: .6em;
     -moz-border-radius-bottomright: .6em;
@@ -234,7 +234,7 @@
     border-bottom-left-radius: .6em;
     border-bottom-right-radius: .6em;
 }
-.ui-tolito-progressbar-overlay-box-body-c
+.ui-jqm-progressbar-overlay-box-body-c
 {
     background: #f9f9f9;
     background-image: linear-gradient( #f9f9f9 , #eee );
@@ -247,32 +247,32 @@
     color: #333;
     text-shadow: 0 1px 0 #fff;
 }
-.ui-tolito-progressbar-overlay-box-body-c, .ui-tolito-progressbar-overlay-box-body-c input, .ui-tolito-progressbar-overlay-box-body-c select, .ui-tolito-progressbar-overlay-box-body-c textarea, .ui-tolito-progressbar-overlay-box-body-c button
+.ui-jqm-progressbar-overlay-box-body-c, .ui-jqm-progressbar-overlay-box-body-c input, .ui-jqm-progressbar-overlay-box-body-c select, .ui-jqm-progressbar-overlay-box-body-c textarea, .ui-jqm-progressbar-overlay-box-body-c button
 {
     font-family: Helvetica, Arial, sans-serif;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link-inherit
+.ui-jqm-progressbar-overlay-box-body-c .ui-link-inherit
 {
     color: #333;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link
+.ui-jqm-progressbar-overlay-box-body-c .ui-link
 {
     color: #2489ce;
     font-weight: bold;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link:visited
+.ui-jqm-progressbar-overlay-box-body-c .ui-link:visited
 {
     color: #2489ce;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link:hover
+.ui-jqm-progressbar-overlay-box-body-c .ui-link:hover
 {
     color: #2489ce;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link:active
+.ui-jqm-progressbar-overlay-box-body-c .ui-link:active
 {
     color: #2489ce;
 }
-.ui-tolito-progressbar-overlay-box-content
+.ui-jqm-progressbar-overlay-box-content
 {
     border-width: 0;
     overflow: visible;

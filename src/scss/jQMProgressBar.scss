@@ -7,7 +7,7 @@
     background-image: -webkit-linear-gradient( $color1, $color2);
 }
 
-@mixin tolito-state-base($background, $gradient1, $gradient2, $color, $text-shadow){
+@mixin jqm-state-base($background, $gradient1, $gradient2, $color, $text-shadow){
     background: $background;
     @include background-image-color($gradient1, $gradient2);
     color: $color;
@@ -15,18 +15,18 @@
     text-shadow: 0 1px 1px $text-shadow;
 }
 
-@mixin ui-tolito-progressbar-outer-X($background, $gradient1, $gradient2, $border, $color, $text-shadow){
-    @include tolito-state-base($background, $gradient1, $gradient2, $color, $text-shadow);
+@mixin ui-jqm-progressbar-outer-X($background, $gradient1, $gradient2, $border, $color, $text-shadow){
+    @include jqm-state-base($background, $gradient1, $gradient2, $color, $text-shadow);
     border: 1px solid $border;
 }
 
-@mixin ui-tolito-progressbar-active-X($background, $gradient1, $gradient2, $color, $text-shadow){
-    @include tolito-state-base($background, $gradient1, $gradient2, $color, $text-shadow);
+@mixin ui-jqm-progressbar-active-X($background, $gradient1, $gradient2, $color, $text-shadow){
+    @include jqm-state-base($background, $gradient1, $gradient2, $color, $text-shadow);
     text-decoration: none;
 }
 
 
-.ui-tolito-progressbar
+.ui-jqm-progressbar
 {
     height: 30px;
     margin: 5em, 0;
@@ -36,7 +36,7 @@
     top: 4px;
     width: 100%;
 }
-.ui-tolito-progressbar-mini
+.ui-jqm-progressbar-mini
 {
     height: 20px;
     margin: 5em, 0;
@@ -46,7 +46,7 @@
     top: 4px;
     width: 100%;
 }
-.ui-tolito-progressbar-bg
+.ui-jqm-progressbar-bg
 {
     border: none;
     height: 100%;
@@ -55,7 +55,7 @@
     width: 100%;
     z-index: 1;
 }
-.ui-tolito-progressbar-label
+.ui-jqm-progressbar-label
 {
     border: none;
     height: 100%;
@@ -66,24 +66,24 @@
     width: 100%;
     z-index: 2;
 }
-.ui-tolito-progressbar-outer-a{
-    @include ui-tolito-progressbar-outer-X(#222, #202020, #2c2c2c, #000, #fff, #111);
+.ui-jqm-progressbar-outer-a{
+    @include ui-jqm-progressbar-outer-X(#222, #202020, #2c2c2c, #000, #fff, #111);
 }
 
-.ui-tolito-progressbar-outer-b{
-    @include ui-tolito-progressbar-outer-X(#4e89c5, #295b8e, #3e79b5, #225377, #fff, #194b7e);
+.ui-jqm-progressbar-outer-b{
+    @include ui-jqm-progressbar-outer-X(#4e89c5, #295b8e, #3e79b5, #225377, #fff, #194b7e);
 }
-.ui-tolito-progressbar-outer-c
+.ui-jqm-progressbar-outer-c
 {
-    @include ui-tolito-progressbar-outer-X(#d6d6d6, #d0d0d0, #dfdfdf, #bbb, #222, #fff);
+    @include ui-jqm-progressbar-outer-X(#d6d6d6, #d0d0d0, #dfdfdf, #bbb, #222, #fff);
 }
-.ui-tolito-progressbar-outer-d{
-    @include ui-tolito-progressbar-outer-X(#eee, #e5e5e5, #f2f2f2, #aaa, #333, #fff);
+.ui-jqm-progressbar-outer-d{
+    @include ui-jqm-progressbar-outer-X(#eee, #e5e5e5, #f2f2f2, #aaa, #333, #fff);
  }
-.ui-tolito-progressbar-outer-e{
-    @include ui-tolito-progressbar-outer-X(#fceda7, #f8d94c, #fadb4e, #f2c43d, #111, #fff);
+.ui-jqm-progressbar-outer-e{
+    @include ui-jqm-progressbar-outer-X(#fceda7, #f8d94c, #fadb4e, #f2c43d, #111, #fff);
 }
-.ui-tolito-progressbar-active-indefinite
+.ui-jqm-progressbar-active-indefinite
 {
     background: url("../images/indefinite-bg.gif");
     color: #fff;
@@ -91,33 +91,33 @@
     text-decoration: none;
     text-shadow: 0 1px 1px #3373a5;
 }
-.ui-tolito-progressbar-active-a
+.ui-jqm-progressbar-active-a
 {
-    @include ui-tolito-progressbar-active-X(#333333, #3C3C3C, #111111, #fff, #3373a5);
+    @include ui-jqm-progressbar-active-X(#333333, #3C3C3C, #111111, #fff, #3373a5);
 }
-.ui-tolito-progressbar-active-b
+.ui-jqm-progressbar-active-b
 {
-    @include ui-tolito-progressbar-active-X(#456F9A, #6FACD5, #497BAE, #fff, #3373a5);
+    @include ui-jqm-progressbar-active-X(#456F9A, #6FACD5, #497BAE, #fff, #3373a5);
 }
-.ui-tolito-progressbar-active-c
+.ui-jqm-progressbar-active-c
 {
-    @include ui-tolito-progressbar-active-X(#B3B3B3, #F0F0F0, #DDDDDD, #fff, #3373a5);
+    @include ui-jqm-progressbar-active-X(#B3B3B3, #F0F0F0, #DDDDDD, #fff, #3373a5);
 }
-.ui-tolito-progressbar-active-d
+.ui-jqm-progressbar-active-d
 {
-    @include ui-tolito-progressbar-active-X(#BBBBBB, #DDDDDD, #BBBBBB, #fff, #3373a5);
+    @include ui-jqm-progressbar-active-X(#BBBBBB, #DDDDDD, #BBBBBB, #fff, #3373a5);
 }
-.ui-tolito-progressbar-active-e
+.ui-jqm-progressbar-active-e
 {
-    @include ui-tolito-progressbar-active-X(#F7C942, #FCEDA7, #FBEF7E, #fff, #3373a5);
+    @include ui-jqm-progressbar-active-X(#F7C942, #FCEDA7, #FBEF7E, #fff, #3373a5);
 }
-.ui-tolito-progressbar-corner-all
+.ui-jqm-progressbar-corner-all
 {
     -moz-border-radius: 1em;
     -webkit-border-radius: 1em;
     border-radius: 1em;
 }
-.ui-tolito-progressbar-overlay
+.ui-jqm-progressbar-overlay
 {
     background-color: #000000;
     bottom: 0;
@@ -127,7 +127,7 @@
     right: 0;
     width: 100%;
 }
-.ui-tolito-progressbar-overlay-box
+.ui-jqm-progressbar-overlay-box
 {
     margin: 10% auto 15px auto;
     max-width: 500px;
@@ -136,7 +136,7 @@
     top: -15px;
     width: 92.5%;
 }
-.ui-tolito-progressbar-overlay-box-corner-top
+.ui-jqm-progressbar-overlay-box-corner-top
 {
     -moz-border-radius-topleft: .6em;
     -moz-border-radius-topright: .6em;
@@ -145,7 +145,7 @@
     border-top-left-radius: .6em;
     border-top-right-radius: .6em;
 }
-.ui-tolito-progressbar-overlay-box-corner-bottom
+.ui-jqm-progressbar-overlay-box-corner-bottom
 {
     -moz-border-radius-bottomleft: .6em;
     -moz-border-radius-bottomright: .6em;
@@ -154,7 +154,7 @@
     border-bottom-left-radius: .6em;
     border-bottom-right-radius: .6em;
 }
-.ui-tolito-progressbar-overlay-box-body-c
+.ui-jqm-progressbar-overlay-box-body-c
 {
     background: #f9f9f9;
     background-image: linear-gradient( #f9f9f9 , #eee );
@@ -167,32 +167,32 @@
     color: #333;
     text-shadow: 0 1px 0 #fff;
 }
-.ui-tolito-progressbar-overlay-box-body-c, .ui-tolito-progressbar-overlay-box-body-c input, .ui-tolito-progressbar-overlay-box-body-c select, .ui-tolito-progressbar-overlay-box-body-c textarea, .ui-tolito-progressbar-overlay-box-body-c button
+.ui-jqm-progressbar-overlay-box-body-c, .ui-jqm-progressbar-overlay-box-body-c input, .ui-jqm-progressbar-overlay-box-body-c select, .ui-jqm-progressbar-overlay-box-body-c textarea, .ui-jqm-progressbar-overlay-box-body-c button
 {
     font-family: Helvetica, Arial, sans-serif;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link-inherit
+.ui-jqm-progressbar-overlay-box-body-c .ui-link-inherit
 {
     color: #333;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link
+.ui-jqm-progressbar-overlay-box-body-c .ui-link
 {
     color: #2489ce;
     font-weight: bold;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link:visited
+.ui-jqm-progressbar-overlay-box-body-c .ui-link:visited
 {
     color: #2489ce;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link:hover
+.ui-jqm-progressbar-overlay-box-body-c .ui-link:hover
 {
     color: #2489ce;
 }
-.ui-tolito-progressbar-overlay-box-body-c .ui-link:active
+.ui-jqm-progressbar-overlay-box-body-c .ui-link:active
 {
     color: #2489ce;
 }
-.ui-tolito-progressbar-overlay-box-content
+.ui-jqm-progressbar-overlay-box-content
 {
     border-width: 0;
     overflow: visible;

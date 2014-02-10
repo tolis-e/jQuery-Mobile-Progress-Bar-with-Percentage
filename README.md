@@ -1,5 +1,5 @@
 # jQuery-Mobile-Progress-Bar-with-Percentage v1.0.6 [![Build Status](https://travis-ci.org/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage.png?branch=master)](https://travis-ci.org/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage)
-> The jQuery-Mobile-Progress-Bar-with-Percentage (Tolito progress bar) is a plugin for jQuery Mobile which creates, manages, starts, stops, resumes and explicitly sets the value of a progress bar or creates an indefinite loading bar. In addition it provides the options to set the progress bar's outer theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion counter, to set whether the progress bar has normal or mini size, to define the interval which specifies the filling frequency rate, to configure the max value of the outer bar and set the initial value of the filling inner bar. The JavaScript prototype chaining method is used in order to enable the chaining of separate method calls where each call is made on the same instance. 
+> The jQuery-Mobile-Progress-Bar-with-Percentage is a plugin for jQuery Mobile which creates, manages, starts, stops, resumes and explicitly sets the value of a progress bar or creates an indefinite loading bar. In addition it provides the options to set the progress bar's outer theme and inner filling theme on the basis of the jQuery Mobile standard themes, to show a percentage completion counter, to set whether the progress bar has normal or mini size, to define the interval which specifies the filling frequency rate, to configure the max value of the outer bar and set the initial value of the filling inner bar. The JavaScript prototype chaining method is used in order to enable the chaining of separate method calls where each call is made on the same instance. 
 
 ## Compatibility
 Tested using:
@@ -8,18 +8,19 @@ Tested using:
 * jQuery 1.8.2 and jQuery Mobile 1.3.0
 * jQuery 1.9.1 and jQuery Mobile 1.3.1
 * jQuery 1.9.1 and jQuery Mobile 1.3.2
+* jQuery 1.9.1 and jQuery Mobile 1.4.0
 
 ## Examples Folder
 The examples folder contains 11 sample HTML files.
     
-* example_1.html: mini tolito progress bar with percentage counter
-* example_2.html: jQuery Mobile dialog with embedded tolito progress bar
-* example_3.html: overlay with centered tolito progress bar
-* example_4.html: jQuery Mobile dialog with a tolito progress bar which starts after a delay period
-* example_5.html: basic default mini tolito progress bar
-* example_6.html: tolito progress bar which stops after 5 seconds
-* example_7.html: tolito progress bar which stops after 5 seconds and resumes after 3 seconds
-* example_8.html: shows how to set explicitly the tolito progress bar's status
+* example_1.html: mini progress bar with percentage counter
+* example_2.html: jQuery Mobile dialog with embedded progress bar
+* example_3.html: overlay with centered progress bar
+* example_4.html: jQuery Mobile dialog with a progress bar which starts after a delay period
+* example_5.html: basic default mini progress bar
+* example_6.html: progress bar which stops after 5 seconds
+* example_7.html: progress bar which stops after 5 seconds and resumes after 3 seconds
+* example_8.html: shows how to set explicitly the progress bar's status
 * example_9.html: shows how to attach a handler for the event which notifies that the progress bar is completed
 * example_10.html: shows how to create an indefinite progress bar
 * example_11.html: shows how to destroy a created progress bar
@@ -51,27 +52,27 @@ The produced JavaScript and CSS files will be in the __dist__ directory.
 ```js
 <!-- /jQuery Mobile X.X.X CSS file -->
 <link rel="stylesheet" href="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.css" />
-<!-- /Tolito CSS file -->
+<!-- /Progress Bar CSS file -->
 <link rel="stylesheet" type="text/css" href="./dist/css/jQuery-Mobile-Progress-Bar-with-Percentage.min.css" />
 <!-- /jQuery X.X.X JS CDN hosted file -->
 <script src="http://code.jquery.com/jquery-X.X.X.min.js"></script>
 <!-- /jQuery Mobile X.X.X JS CDN hosted file -->
 <script src="http://code.jquery.com/mobile/X.X.X/jquery.mobile-X.X.X.min.js"></script>
-<!-- /Tolito JS file -->
+<!-- /Progress Bar JS file -->
 <script type="text/javascript" src="./dist/js/jQuery-Mobile-Progress-Bar-with-Percentage.min.js"></script>
 ```
     
 ### Step 2
 > Add the following HTML snippet inside your jQM page:
 
-    <!-- /Tolito Progress Bar v1.0 for jQuery Mobile -->
+    <!-- /Progress Bar for jQuery Mobile -->
     <div id="progressbar"></div>
 
 ### Step 3
-> Use the following snippet to configure, build and init the progress bar. It is not mandatory to set the options. The TolitoProgressBar constructor expects to receive as an argument the element id of the div tag created in Step 2. Check the examples for usage instructions.
+> Use the following snippet to configure, build and run the progress bar (progressbar is the id of the div element which is created during the previous step). It is not mandatory to set the options.
 
 ```js
-TolitoProgressBar('progressbar')
+jQMProgressBar('progressbar')
     .setOuterTheme('b')
     .setInnerTheme('e')
     .isMini(false)
@@ -79,7 +80,6 @@ TolitoProgressBar('progressbar')
     .setStartFrom(0)
     .setInterval(10)
     .showCounter(true)
-    .logOptions()
     .build()
     .run();
 ```
@@ -127,10 +127,6 @@ Description: Sets whether a percentage completion counter is appeared or not. Th
 Usage: Optional  
 Description: Sets whether the progress bar is indefinite. The bool value must be true or false. The default value is false.
 
-#### logOptions()
-Usage: Optional  
-Description: Logs the configured options in the console.
-
 #### build()
 Usage: Mandatory  
 Description: Creates the progress bar instance.
@@ -154,7 +150,7 @@ Description: Destroys the progress bar. The progress bar div is rolled back to i
 ## Themes Customization
 The CSS included in the current project contains the default jQuery Mobile themes. If you use a customized theme, you might want to change CSS colors to match your theme. You can find instructions for customizing the default jQuery Mobile themes [here](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/README-customize-themes.md).
 
-Special thanks to [Michael Kariv](https://github.com/michaelkariv) for creating the [SASS](http://sass-lang.com/) [tolito.scss](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/src/scss/tolito.scss) file and the corresponding [README](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/README-customize-themes.md) guide.
+Special thanks to [Michael Kariv](https://github.com/michaelkariv) for creating the [SASS](http://sass-lang.com/) [jQMProgressBar.scss](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/src/scss/jQMProgressBar.scss) file and the corresponding [README](https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage/blob/master/README-customize-themes.md) guide.
 
 ## License
 
