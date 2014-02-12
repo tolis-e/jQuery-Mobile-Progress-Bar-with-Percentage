@@ -257,7 +257,7 @@
     };
 
     /**
-        Set whether the progress bra is indefinite.
+        Set whether the progress bar is indefinite.
         @param {Boolean} newIndefinite - true or false
         @default false
         @example
