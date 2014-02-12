@@ -1,0 +1,30 @@
+{
+    "name": "mobile-progress-bar",
+    "description": "jQuery Mobile Progress Bar with Percentage",
+    "title": "jQuery-Mobile-Progress-Bar-with-Percentage",
+    "version": "1.0.8",
+    "homepage": "https://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/tolis-e/jQuery-Mobile-Progress-Bar-with-Percentage.git"
+    },
+    "author": {
+        "name": "Tolis Emmanouilidis",
+        "email": "tolisemm@gmail.com"
+    },
+    "licenses": [
+        {
+            "type": "jQuery MIT",
+            "url": "http://jquery.org/license"
+        }
+    ],
+    "keywords": [
+        "jQueryMobile",
+        "MobileProgressBar",
+        "slider"
+    ],
+    "dependencies": {
+        "jquery": ">=1.8.2",
+        "jquery.mobile": ">=1.2.0"
+    }
+}
