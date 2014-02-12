@@ -37,11 +37,11 @@ module.exports = function(grunt) {
                 banner: '<%= meta.banner %>'
             },
             js: {
-                src: ['src/js/jQMProgressBar-<%= pkg.version %>.js'],
+                src: ['src/js/jQMProgressBar.js'],
                 dest: 'dist/js/<%= pkg.name %>.js'
             },
             css: {
-                src: ['src/css/jQMProgressBar-<%= pkg.version %>.css'],
+                src: ['src/css/jQMProgressBar.css'],
                 dest: 'dist/css/<%= pkg.name %>.css'
             }
         },
