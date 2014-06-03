@@ -19,6 +19,9 @@ module.exports = function(grunt) {
                         "http://localhost:<%= connect.server.options.port %>/tests/index.html"
                     ]
                 }
+            },
+            options: {
+                timeout: 10000
             }
         },
         meta: {
