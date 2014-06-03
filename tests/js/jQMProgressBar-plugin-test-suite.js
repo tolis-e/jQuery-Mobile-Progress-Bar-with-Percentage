@@ -12,13 +12,13 @@ var jQMProgressBarPluginTestSuite = {},
 
 (function ()
 {
-    if (QUnit !== undefined && QUnit.config !== undefined)
+    if (QUnit && QUnit.config)
     {
         // TODO: Setup test suite so that order does not matter and no tests rely on previous tests
         QUnit.config.reorder = false;
     }
 
-    if (Utilities === undefined)
+    if (!Utilities)
     {
         Utilities =
         {
