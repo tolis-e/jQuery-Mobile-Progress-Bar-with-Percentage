@@ -9,6 +9,7 @@ Tested using:
 * jQuery 1.9.1 and jQuery Mobile 1.3.1
 * jQuery 1.9.1 and jQuery Mobile 1.3.2
 * jQuery 1.9.1 and jQuery Mobile 1.4.0
+* jQuery 1.9.1 and jQuery Mobile 1.4.3
 
 ## Examples Folder
 The examples folder contains 11 sample HTML files.
