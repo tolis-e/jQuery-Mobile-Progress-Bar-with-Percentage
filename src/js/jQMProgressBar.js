@@ -118,16 +118,16 @@
         if (!(this instanceof jQMProgressBar)) {
             return new jQMProgressBar(elementId);
         }
-        this._id = elementId;
-        this._outerTheme = null;
-        this._innerTheme = null;
-        this._max = 100;
-        this._startFrom = 0;
-        this._interval = 100;
-        this._isBuilt = false;
-        this._mini = false;
-        this._isRunning = false;
-        this._indefinite = false;
+        this.id = elementId;
+        this.outerTheme = null;
+        this.innerTheme = null;
+        this.max = 100;
+        this.startFrom = 0;
+        this.interval = 100;
+        this.isBuilt = false;
+        this.mini = false;
+        this.isRunning = false;
+        this.indefinite = false;
         return this;
     };
 
@@ -148,10 +148,10 @@
             .build();
      */
     jQMProgressBar.prototype.setOuterTheme = function (newTheme) {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            this._outerTheme = newTheme;
+            this.outerTheme = newTheme;
             return this;
         }
     };
@@ -173,10 +173,10 @@
             .build();
      */
     jQMProgressBar.prototype.setInnerTheme = function (newInnerTheme) {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            this._innerTheme = newInnerTheme;
+            this.innerTheme = newInnerTheme;
             return this;
         }
     };
@@ -198,10 +198,10 @@
             .build();
      */
     jQMProgressBar.prototype.setStartFrom = function (newStartFrom) {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            this._startFrom = newStartFrom;
+            this.startFrom = newStartFrom;
             return this;
         }
     };
@@ -223,10 +223,10 @@
             .build();
      */
     jQMProgressBar.prototype.setMax = function (newMax) {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            this._max = newMax;
+            this.max = newMax;
             return this;
         }
     };
@@ -248,10 +248,10 @@
             .build();
      */
     jQMProgressBar.prototype.isMini = function (newMini) {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            this._mini = newMini;
+            this.mini = newMini;
             return this;
         }
     };
@@ -267,10 +267,10 @@
             .build();
      */
     jQMProgressBar.prototype.isIndefinite = function (newIndefinite) {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            this._indefinite = newIndefinite;
+            this.indefinite = newIndefinite;
             return this;
         }
     };
@@ -292,10 +292,10 @@
             .build();
      */
     jQMProgressBar.prototype.showCounter = function (newShowCounter) {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            this._showCounter = newShowCounter;
+            this.showCounter = newShowCounter;
             return this;
         }
     };
@@ -317,10 +317,10 @@
             .build();
      */
     jQMProgressBar.prototype.setInterval = function (newInterval) {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            this._interval = newInterval;
+            this.interval = newInterval;
             return this;
         }
     };
@@ -340,20 +340,20 @@
             .build();
      */
     jQMProgressBar.prototype.build = function () {
-        if (this._isBuilt) {
+        if (this.isBuilt) {
             throw '[Error]: pbar is already built.';
         } else {
-            $(['#', this._id].join(""))
+            $(['#', this.id].join(""))
                 .progressbar({
-                    outerTheme: this._outerTheme,
-                    innerTheme: this._innerTheme,
-                    value: this._startFrom,
-                    max: this._max,
-                    mini: this._mini,
-                    indefinite: this._indefinite,
+                    outerTheme: this.outerTheme,
+                    innerTheme: this.innerTheme,
+                    value: this.startFrom,
+                    max: this.max,
+                    mini: this.mini,
+                    indefinite: this.indefinite,
                     counter: this.showCounter
                 });
-            this._isBuilt = true;
+            this.isBuilt = true;
             return this;
         }
     };
@@ -375,30 +375,30 @@
         pbar.run();
      */
     jQMProgressBar.prototype.run = function () {
-        if (this._isRunning) {
+        if (this.isRunning) {
             throw '[Error]: pbar is already running.';
-        } else if (this._indefinite) {
+        } else if (this.indefinite) {
             throw '[Error]: pbar is indefinite.';
         } else {
             (function loop(instance) {
                 instance.fillProgressBar = setTimeout((function (inst) {
                     return function () {
-                        var thisValue = $(['#', inst._id].join(""))
+                        var thisValue = $(['#', inst.id].join(""))
                             .progressbar('option', 'value'),
                             counter = !isNaN(thisValue) ? (thisValue + 1) : 1;
-                        if (counter > inst._max) {
+                        if (counter > inst.max) {
                             clearTimeout(inst.fillProgressBar);
                         } else {
-                            $(['#', inst._id].join(""))
+                            $(['#', inst.id].join(""))
                                 .progressbar({
                                     value: counter
                                 });
                             loop.call(this, inst);
                         }
                     };
-                })(instance), instance._interval);
+                })(instance), instance.interval);
             })(this);
-            this._isRunning = true;
+            this.isRunning = true;
             return this;
         }
     };
@@ -421,11 +421,11 @@
         pbar.stop();
      */
     jQMProgressBar.prototype.stop = function () {
-        if (!this._isRunning) {
+        if (!this.isRunning) {
             throw '[Error]: pbar is already stopped.';
         } else {
             clearTimeout(this.fillProgressBar);
-            this._isRunning = false;
+            this.isRunning = false;
             return this;
         }
     };
@@ -448,10 +448,10 @@
         pbar.setValue(50);
      */
     jQMProgressBar.prototype.setValue = function (val) {
-        if (this._indefinite) {
+        if (this.indefinite) {
             throw '[Error]: pbar is indefinite.';
         } else {
-            $(['#', this._id].join(""))
+            $(['#', this.id].join(""))
                 .progressbar({
                     value: val
                 });
@@ -476,15 +476,15 @@
         pbar.destroy();
      */
     jQMProgressBar.prototype.destroy = function () {
-        if (!this._isBuilt) {
+        if (!this.isBuilt) {
             throw '[Error]: pbar is not built yet.';
         } else {
             if (this.fillProgressBar) {
                 clearTimeout(this.fillProgressBar);
             }
             $(document)
-                .off('complete', ['#', this._id].join(""));
-            $(['#', this._id].join(""))
+                .off('complete', ['#', this.id].join(""));
+            $(['#', this.id].join(""))
                 .progressbar('destroy');
             return null;
         }

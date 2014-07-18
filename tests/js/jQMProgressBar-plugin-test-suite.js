@@ -57,14 +57,14 @@ var jQMProgressBarPluginTestSuite = {},
                 .setInterval(INTERVAL)
                 .showCounter(SHOW_COUNTER)
                 .build();
-            ok(pbar !== undefined, "Progress bar is defined");
-            strictEqual(pbar._outerTheme, OUTER_THEME, "Outer theme setter");
-            strictEqual(pbar._innerTheme, INNER_THEME, "Inner theme setter");
-            strictEqual(pbar._mini, MINI, "Is mini setter");
-            strictEqual(pbar._max, MAX, "Max value setter");
-            strictEqual(pbar._startFrom, START_FROM, "Start from setter");
-            strictEqual(pbar._interval, INTERVAL, "Interval setter");
-            strictEqual(pbar._showCounter, SHOW_COUNTER, "Show counter setter");
+            ok(pbar, "Progress bar exists");
+            strictEqual(pbar.outerTheme, OUTER_THEME, "Outer theme setter");
+            strictEqual(pbar.innerTheme, INNER_THEME, "Inner theme setter");
+            strictEqual(pbar.mini, MINI, "Is mini setter");
+            strictEqual(pbar.max, MAX, "Max value setter");
+            strictEqual(pbar.startFrom, START_FROM, "Start from setter");
+            strictEqual(pbar.interval, INTERVAL, "Interval setter");
+            strictEqual(pbar.showCounter, SHOW_COUNTER, "Show counter setter");
             var classValue = Utilities.getClass(PROGRESS_BAR_ELEMENT_ID);
             ok(Utilities.stringExistsInString(["ui-jqm-progressbar", MINI ? "-mini" : ""].join(""), classValue),
                 "Contains mini or normal class");
