@@ -82,7 +82,11 @@
             return Math.min(this.options.max, Math.max(this.min, val));
         },
         _percentage: function () {
-            return 100 * this._value() / this.options.max;
+            if (this.options.max === 0){
+                return 0;
+            } else {
+                return 100 * this._value() / this.options.max;
+            }
         },
         _refreshValue: function () {
             var value = this.value();
