@@ -383,7 +383,7 @@
             throw '[Error]: pbar is already running.';
         } else if (this.indefinite) {
             throw '[Error]: pbar is indefinite.';
-        } else {
+        } else if (this.max !== 0) {
             (function loop(instance) {
                 instance.fillProgressBar = setTimeout((function (inst) {
                     return function () {
